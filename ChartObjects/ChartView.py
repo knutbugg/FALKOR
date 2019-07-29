@@ -1,0 +1,1 @@
+"""Displaying a trading chart. """
