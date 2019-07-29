@@ -12,7 +12,7 @@ class NotEnoughFunds(Exception):
         return self.str
 
 
-class PaperTrader(TradeExecutor):
+class PaperTrader(TradeExecutor, BinanceOperator):
 
     def __init__(self, wallet, operator):
         """ Initialize a PaperTrader class"""
@@ -20,24 +20,6 @@ class PaperTrader(TradeExecutor):
         self.op = operator
 
         self.orders = {}
-
-    """ Format of API response for get_market_depth()
-    {
-      "lastUpdateId": 1027024,
-      "bids": [
-        [
-          "4.00000000",     // PRICE
-          "431.00000000"    // QTY
-        ]
-      ],
-      "asks": [
-        [
-          "4.00000200",
-          "12.00000000"
-        ]
-      ]
-    }
-    """
 
     def buy_limit_order(self, symbol, quantity, price):
         pass
@@ -138,3 +120,6 @@ class PaperTrader(TradeExecutor):
 
             self.wallet += total_sold_value
             return total_sold_value
+
+    def trade_from_signals(self, signals):
+        pass

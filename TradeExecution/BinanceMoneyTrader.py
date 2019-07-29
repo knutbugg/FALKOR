@@ -6,14 +6,7 @@ class BinanceMoneyTrader(MoneyTrader):
         self.op = BinanceOperator(client_id, client_secret)
 
     def buy_limit_order(self, symbol, quantity, price):
-        from binance.enums import *
-        order = client.create_order(
-            symbol='BNBBTC',
-            side=SIDE_BUY,
-            type=ORDER_TYPE_LIMIT,
-            timeInForce=TIME_IN_FORCE_GTC,
-            quantity=100,
-            price='0.00001')
+        pass
 
     def sell_limit_order(self, symbol, quantity, price):
         raise NotImplementedError

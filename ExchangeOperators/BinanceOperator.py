@@ -55,4 +55,3 @@ class BinanceOperator(ExchangeOperator):
 
     def get_trade_fees(self):
         return self.client.get_trade_fee()
-
