@@ -35,11 +35,15 @@ class HistoricalDataSaver:
         self.initialize_storage_file()
 
     def initialize_storage_file(self):
-        """Create an empty .csv file in the directory specified. """
-        df = pd.DataFrame(columns=['open_time', 'open', 'high', 'low', 'close',
-                                   'volume', 'close_time','quote_asset_volume',
-                                   'num_trades', 'tkbbav', 'tkqav', 'ign.'])
-        df.to_csv(self.loc, index=False)
+        """Create an empty .csv file in the directory specified, or loads
+         up the already existing file"""
+        if self.loc.is_file():
+            pass
+        else:
+            df = pd.DataFrame(columns=['open_time', 'open', 'high', 'low', 'close',
+                                       'volume', 'close_time','quote_asset_volume',
+                                       'num_trades', 'tkbbav', 'tkqav', 'ign.'])
+            df.to_csv(self.loc, index=False)
 
     def save_data(self, data):
         """Save Binance formatted candlestick data into the .csv file, at the

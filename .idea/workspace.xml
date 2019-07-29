@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
+      <change afterPath="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Run/Account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Run/TradingAutomator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeExecution/MoneyTrader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeExecution/PaperTrader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeExecution/TradeExecutor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChartObjects/ChartView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartObjects/ChartView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/startup.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BinanceOperator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaperTrader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradingAutomator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Run/TradingAutomator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StrategyInterface.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Strategy/StrategyInterface.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="BinanceMoneyTrader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run/Account.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoricalDataFeed.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="11" column="64" selection-start-line="7" selection-start-column="8" selection-end-line="11" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="startup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run/startup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChartView.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ChartObjects/ChartView.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>self.operator.Client</find>
+      <find>plugins</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Client</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ChartObjects/Chart.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/Chart_Active.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/Chart_Completed.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/credentials.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/Credentials.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/BinanceOperator.py" />
+        <option value="$PROJECT_DIR$/Strategy/StrategyInterface.py" />
+        <option value="$PROJECT_DIR$/Run.py" />
+        <option value="$PROJECT_DIR$/Backtesting/HistoricalDataLoader.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/Candle.py" />
+        <option value="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" />
+        <option value="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" />
+        <option value="$PROJECT_DIR$/ChartObjects/ChartView.py" />
+        <option value="$PROJECT_DIR$/Backtesting/TradeExecutor.py" />
+        <option value="$PROJECT_DIR$/TradeExecution/MoneyTrader.py" />
+        <option value="$PROJECT_DIR$/Run/Account.py" />
+        <option value="$PROJECT_DIR$/Run/startup.py" />
+        <option value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
+        <option value="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" />
+        <option value="$PROJECT_DIR$/TradeExecution/TradeExecutor.py" />
+        <option value="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" />
+        <option value="$PROJECT_DIR$/TradeExecution/PaperTrader.py" />
+        <option value="$PROJECT_DIR$/Run/TradingAutomator.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1913" />
+    <option name="width" value="554" />
+    <option name="height" value="1927" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtesting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="ChartObjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="ExchangeOperators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="Run" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="Strategy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="TradeExecution" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor\TradeExecution" />
+      <recent name="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor" />
+      <recent name="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor\ExchangeOperators" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor\ChartObjects" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.PaperTrader">
+    <configuration name="BinanceOperator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Falkor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExchangeOperators" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="HistoricalDataFeed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Falkor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backtesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="PaperTrader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Falkor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TradeExecution" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TradeExecution/PaperTrader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="startup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Falkor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Run" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run/startup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Doctest BinanceOperator.get_historical_candlesticks" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="Falkor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExchangeOperators" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
+      <option name="CLASS_NAME" value="BinanceOperator" />
+      <option name="METHOD_NAME" value="get_historical_candlesticks" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Doctest BinanceOperator.get_historical_candlesticks" />
+      <item itemvalue="Python.HistoricalDataFeed" />
+      <item itemvalue="Python.startup" />
+      <item itemvalue="Python.BinanceOperator" />
+      <item itemvalue="Python.PaperTrader" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PaperTrader" />
+        <item itemvalue="Python.BinanceOperator" />
+        <item itemvalue="Python.startup" />
+        <item itemvalue="Python.HistoricalDataFeed" />
+        <item itemvalue="Python tests.Doctest BinanceOperator.get_historical_candlesticks" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="" />
+      <created>1564191223269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564191223269</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
+      <created>1564414778300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564414778300</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 45m 24s.xml">
+      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 47m 52s.xml">
+      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 48m 15s.xml">
+      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 50m 18s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 50m 56s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 51m 07s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 38s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 40s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 50s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 56m 03s.xml">
+      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1096" height="1936" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16824196" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298109" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298109" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32884097" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" visible="true" weight="0.2797553" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32869855" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Candle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Credentials.py" />
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/binance/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="756" lean-forward="true" selection-start-line="756" selection-end-line="756" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Candle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/h_candlesticks">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/internals/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="1717" selection-start-line="1717" selection-end-line="1717" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="425" column="4" selection-start-line="425" selection-start-column="4" selection-end-line="425" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/ChartView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="11" column="64" selection-start-line="7" selection-start-column="8" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/startup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/Account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TradeExecution/MoneyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TradeExecution/TradeExecutor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy/StrategyInterface.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/TradingAutomator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

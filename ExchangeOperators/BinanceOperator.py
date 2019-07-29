@@ -1,39 +1,58 @@
-from unittest.mock import Mock
 from binance.client import Client
+from ExchangeOperators.ExchangeOperator import ExchangeOperator
 
-
-class BinanceOperator:
+class BinanceOperator(ExchangeOperator):
 
     def __init__(self, client_id, client_secret):
-        """Initialilze BinanceOperator with api credentials."""
+        """Initialize BinanceOperator with api credentials."""
 
         self.client = Client(client_id, client_secret)
 
-    def buy_order(self):
-        # CURRENTLY UNDER CONSTRUCTION
-        # place a test market buy order, to place an actual order use the create_order function
-        order = self.client.create_test_order(
-            symbol='BNBBTC',
-            side=Client.SIDE_BUY,
-            type=Client.ORDER_TYPE_MARKET,
-            quantity=100)
+    def get_market_depth(self, symbol):
+        depth = self.client.get_order_book(symbol=symbol)
+        return depth
 
-    def get_candlesticks(self, symbol, interval=Client.KLINE_INTERVAL_30MINUTE):
+    def get_recent_trades(self, symbol):
+        trades = self.client.get_recent_trades(symbol=symbol)
+        return trades
+
+    def get_historical_trades(self, symbol):
+        trades = self.client.get_historical_trades(symbol=symbol)
+        return trades
+
+    def get_aggregate_trades(self, symbol):
+        trades = self.client.get_aggregate_trades(symbol=symbol)
+        return trades
+
+    def get_24hr_tickers(self):
+        tickers = self.client.get_ticker()
+        return tickers
+
+    def get_symbol_info(self, symbol):
+        info = self.client.get_symbol_info(symbol)
+        return info
+
+    def get_candlesticks(self, symbol, interval):
         candles = self.client.get_klines(symbol=symbol,
                                          interval=interval)
+        return candles
 
-    def get_historical_candlesticks(self, symbol, interval,
-                                                  start_time,
-                                                  end_time=None
-                                                  ):
-
+    def get_historical_candlesticks(self, symbol, interval, start_time,
+                                    end_time=None):
         if end_time is None:
-            candles = self.client.get_historical_klines(symbol,
-                                                        interval,
+            candles = self.client.get_historical_klines(symbol, interval,
                                                         start_time)
-                                                        # end_time)
         else:
             candles = self.client.get_historical_klines(symbol, interval,
-                                                        start_time,
-                                                        end_time)
+                                                        start_time, end_time)
         return candles
+
+    def get_account_info(self):
+        return self.client.get_account()
+
+    def get_asset_balance(self, asset):
+        return self.client.get_asset_balance(asset=asset)
+
+    def get_trade_fees(self):
+        return self.client.get_trade_fee()
+
