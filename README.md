@@ -1,10 +1,7 @@
-# Falkor
-Falkor is my automated trading strategy 
+# Falkor | Automated Trading Platform
 ![Alt text](falkor.jpg?raw=true "Falkor from The Neverending Story")
 
-# Project Title
-
-One Paragraph of project description goes here
+Falkor is a multi-exchange, light-weight, and highy customizable automated trading platform. Currently, only supported for Binance
 
 ## Getting Started
 
