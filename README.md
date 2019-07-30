@@ -1,5 +1,5 @@
-# Falkor | Automated Trading Platform
-Falkor is a multi-exchange, light-weight, and highy customizable automated trading platform. Currently, only supported for Binance
+# Falkor | Automated Algorithmic Trading Platform
+Falkor is a multiexchange, lightweight, and highy customizable automated trading platform. Currently, only supported for the Binance cryptocurrency exchange. 
 
 
 ![Alt text](falkor.jpg?raw=true "Falkor from The Neverending Story")
