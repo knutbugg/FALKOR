@@ -1,5 +1,6 @@
-from Strategy.StrategyInterface import Strategy
-
+from Strategy.Strategy import Strategy
+import pandas as pd
+import numpy as np
 
 class SimpleStrategy(Strategy):
     """Simple template for creating signals on the data. """
@@ -18,3 +19,7 @@ class SimpleStrategy(Strategy):
     def update(self, update_info):
         """Update the corresponding data files with any changes """
         pass
+
+    def get_technical_indicators(self):
+        pass
+

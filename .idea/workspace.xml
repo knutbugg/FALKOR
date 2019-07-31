@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
-      <change afterPath="$PROJECT_DIR$/Strategy/TradingSignals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Strategy/TINNStrategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Strategy/TechnicalIndicators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartObjects/ChartView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartObjects/ChartView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartObjects/Chart_Active.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartObjects/Chart_Completed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/Account.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/Account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/TradingAutomator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/Automator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/ethbtc-1D-lastyear.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/ethbtc-1h-lastmonth.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/startup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Strategy/SimpleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/SimpleStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strategy/StrategyInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/StrategyInterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" beforeDir="false" afterPath="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeExecution/MoneyTrader.py" beforeDir="false" afterPath="$PROJECT_DIR$/TradeExecution/MoneyTrader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeExecution/PaperTrader.py" beforeDir="false" afterPath="$PROJECT_DIR$/TradeExecution/PaperTrader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeExecution/TradeExecutor.py" beforeDir="false" afterPath="$PROJECT_DIR$/TradeExecution/TradeExecutor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy/StrategyInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/Strategy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +29,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinanceMoneyTrader.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py">
+      <file leaf-file-name="TINNStrategy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Strategy/TINNStrategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="713">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnicalIndicators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Strategy/TechnicalIndicators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docrunner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChartHistoryBunch.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -67,8 +77,8 @@
       <file leaf-file-name="PaperTrader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="82" column="33" lean-forward="true" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+            <state relative-caret-position="1886">
+              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -120,14 +130,16 @@
         <option value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
         <option value="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" />
         <option value="$PROJECT_DIR$/Run/Account.py" />
-        <option value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
         <option value="$PROJECT_DIR$/Strategy/StrategyInterface.py" />
         <option value="$PROJECT_DIR$/Strategy/TradingSignals.py" />
-        <option value="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" />
         <option value="$PROJECT_DIR$/TradeExecution/TradeExecutor.py" />
         <option value="$PROJECT_DIR$/TradeExecution/MoneyTrader.py" />
         <option value="$PROJECT_DIR$/Exceptions/OutOfFunds.py" />
         <option value="$PROJECT_DIR$/TradeExecution/PaperTrader.py" />
+        <option value="$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py" />
+        <option value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+        <option value="$PROJECT_DIR$/Strategy/TechnicalIndicators.py" />
+        <option value="$PROJECT_DIR$/Strategy/TINNStrategy.py" />
       </list>
     </option>
   </component>
@@ -141,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,11 +178,6 @@
             <path>
               <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Falkor" type="462c0819:PsiDirectoryNode" />
-              <item name="Run" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
               <item name="Strategy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -183,6 +189,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,111 +220,106 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Automator">
-    <configuration name="Automator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Doctest SimpleStrategy.obv">
+    <configuration name="Doctest SimpleStrategy.bb" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Run" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run/Automator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+      <option name="CLASS_NAME" value="SimpleStrategy" />
+      <option name="METHOD_NAME" value="bb" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
     </configuration>
-    <configuration name="BinanceLiveDataFeed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Doctest SimpleStrategy.ema" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExchangeOperators" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+      <option name="CLASS_NAME" value="SimpleStrategy" />
+      <option name="METHOD_NAME" value="ema" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
     </configuration>
-    <configuration name="PaperTrader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Doctest SimpleStrategy.ma" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TradeExecution" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TradeExecution/PaperTrader.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+      <option name="CLASS_NAME" value="SimpleStrategy" />
+      <option name="METHOD_NAME" value="ma" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
     </configuration>
-    <configuration name="TradingAutomator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Doctest SimpleStrategy.obv" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Run" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor\Run\Automator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+      <option name="CLASS_NAME" value="SimpleStrategy" />
+      <option name="METHOD_NAME" value="obv" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
     </configuration>
-    <configuration name="startup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Doctest SimpleStrategy.sma" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Run" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run/startup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
+      <option name="CLASS_NAME" value="SimpleStrategy" />
+      <option name="METHOD_NAME" value="sma" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.PaperTrader" />
-      <item itemvalue="Python.BinanceLiveDataFeed" />
-      <item itemvalue="Python.TradingAutomator" />
-      <item itemvalue="Python.Automator" />
-      <item itemvalue="Python.startup" />
+      <item itemvalue="Python tests.Doctest SimpleStrategy.ma" />
+      <item itemvalue="Python tests.Doctest SimpleStrategy.ema" />
+      <item itemvalue="Python tests.Doctest SimpleStrategy.sma" />
+      <item itemvalue="Python tests.Doctest SimpleStrategy.bb" />
+      <item itemvalue="Python tests.Doctest SimpleStrategy.obv" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Automator" />
-        <item itemvalue="Python.startup" />
-        <item itemvalue="Python.BinanceLiveDataFeed" />
-        <item itemvalue="Python.TradingAutomator" />
-        <item itemvalue="Python.PaperTrader" />
+        <item itemvalue="Python tests.Doctest SimpleStrategy.obv" />
+        <item itemvalue="Python tests.Doctest SimpleStrategy.bb" />
+        <item itemvalue="Python tests.Doctest SimpleStrategy.ema" />
+        <item itemvalue="Python tests.Doctest SimpleStrategy.sma" />
+        <item itemvalue="Python tests.Doctest SimpleStrategy.ma" />
       </list>
     </recent_temporary>
   </component>
@@ -343,79 +345,79 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 45m 24s.xml">
-      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 27m 11s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 47m 52s.xml">
-      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_sma - 2019.07.31 at 13h 28m 03s.xml">
+      <configuration name="Doctest SimpleStrategy.sma" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctests_in_BinanceOperator - 2019.07.28 at 21h 48m 15s.xml">
-      <configuration name="Doctests in BinanceOperator" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 29m 32s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 50m 18s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 29m 49s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 50m 56s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 30m 00s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 51m 07s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 30m 43s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 38s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_ema - 2019.07.31 at 13h 31m 20s.xml">
+      <configuration name="Doctest SimpleStrategy.ema" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 40s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_bb - 2019.07.31 at 16h 13m 17s.xml">
+      <configuration name="Doctest SimpleStrategy.bb" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 55m 50s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_bb - 2019.07.31 at 16h 16m 25s.xml">
+      <configuration name="Doctest SimpleStrategy.bb" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_BinanceOperator_get_historical_candlesticks - 2019.07.28 at 21h 56m 03s.xml">
-      <configuration name="Doctest BinanceOperator.get_historical_candlesticks" configurationId="tests" />
+    <history-entry file="Doctest_SimpleStrategy_obv - 2019.07.31 at 17h 01m 10s.xml">
+      <configuration name="Doctest SimpleStrategy.obv" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1096" height="1936" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16824196" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.16824196" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3298109" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298109" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32869855" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.2797553" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32869855" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39988875" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.36596218" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298109" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298109" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.16824196" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.2797553" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32869855" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3298109" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39988875" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32869855" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298109" />
       <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298109" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32869855" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +462,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -513,20 +515,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py" />
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py" />
     <entry file="file://$PROJECT_DIR$/ChartObjects/Candle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -550,13 +540,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py" />
     <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataLoader.py" />
     <entry file="file://$PROJECT_DIR$/data/h_candlesticks" />
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/internals/managers.py">
@@ -584,16 +568,7 @@
     <entry file="file://$PROJECT_DIR$/falkor.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run/ethbtc-1D-lastyear.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret selection-end-column="95" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/ethbtc-1D-lastyear.csv" />
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -615,19 +590,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run/ethbtc-1h-lastmonth.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/ethbtc-1h-lastmonth.csv" />
+    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py" />
     <entry file="file://$PROJECT_DIR$/Run/startup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -653,13 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -719,23 +676,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Strategy/SimpleStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Strategy/StrategyInterface.py">
+    <entry file="file://$PROJECT_DIR$/Strategy/Strategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exceptions/OutOfFunds.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Exceptions/OutOfFunds.py" />
     <entry file="file://$PROJECT_DIR$/TradeExecution/TradeExecutor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -745,8 +693,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="82" column="33" lean-forward="true" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        <state relative-caret-position="1886">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -757,10 +719,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TradeExecution/BinanceMoneyTrader.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="343">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy/SimpleStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy/TechnicalIndicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy/TINNStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
         </state>
       </provider>
     </entry>
