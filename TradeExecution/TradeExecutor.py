@@ -1,5 +1,6 @@
-"""Abstract class"""
 class TradeExecutor:
+    """Class used by Automated to perform all trades with the specified exchange
+    """
 
     def buy_limit_order(self, symbol, quantity, price):
         raise NotImplementedError
@@ -24,4 +25,3 @@ class TradeExecutor:
 
     def get_all_orders(self):
         raise NotImplementedError
-

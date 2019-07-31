@@ -2,46 +2,40 @@ from TradeExecution.TradeExecutor import TradeExecutor
 from ExchangeOperators.BinanceOperator import BinanceOperator
 
 
-class NotEnoughFunds(Exception):
-    """Raised when charge exceed self.wallet funds"""
+class PaperTrader(TradeExecutor):
+    """TradeExecutor running on a paper trading account"""
 
-    def __init__(self, str):
-        self.str = str
-
-    def __str__(self):
-        return self.str
-
-
-class PaperTrader(TradeExecutor, BinanceOperator):
-
-    def __init__(self, wallet, operator):
-        """ Initialize a PaperTrader class"""
+    def __init__(self, wallet):
+        """Initialize a PaperTrader class"""
         self.wallet = wallet
-        self.op = operator
+        self.op = BinanceOperator()
 
         self.orders = {}
 
     def buy_limit_order(self, symbol, quantity, price):
+        """Send a buy order for quantity amount of symbol"""
         pass
 
     def sell_limit_order(self, symbol, quantity, price):
+        """Send a sell order for quantity amount of symbol"""
         raise NotImplementedError
 
     def buy_market_order(self, symbol, quantity) -> str:
-        market_depth = self.op.get_market_depth(symbol)
+        """Buy quantity of symbol for the best market prices offered"""
 
+        market_depth = self.op.get_market_depth(symbol)
         qty_to_buy = quantity
         price_spent = 0
 
         if price_spent > self.wallet:
-            raise NotEnoughFunds(
+            raise Exception(
                 '{} in the wallet, order costs at least {}'.format(
                     self.wallet, price_spent
                 ))
 
         while qty_to_buy > 0:
             if price_spent > self.wallet:
-                raise NotEnoughFunds(
+                raise Exception(
                     '{} in the wallet, order costs at least {}'.format(
                         self.wallet, price_spent
                     ))
@@ -122,4 +116,8 @@ class PaperTrader(TradeExecutor, BinanceOperator):
             return total_sold_value
 
     def trade_from_signals(self, signals):
-        pass
+        """Perform specified trades inside the TradingSignals object. """
+        for buy_signal in signals.get_buy_signals():
+            print(buy_signal)
+        for sell_signal in signals.get_sell_signals():
+            print(sell_signal)

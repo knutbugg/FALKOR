@@ -3,13 +3,11 @@ from Backtesting.HistoricalDataSaver import HistoricalDataSaver
 from binance.client import Client
 
 class HistoricalDataFeed:
-
-    def __init__(self, exchange: str, credentials: dict):
+    """Used to get historial candlestick data and save it into a .csv file"""
+    def __init__(self, exchange: str):
         operator = None
         if exchange == "binance":
-            client_id = credentials.get('client_id')
-            client_secret = credentials.get('client_secret')
-            operator = BinanceOperator(client_id, client_secret)
+            operator = BinanceOperator()
 
         # Continue with if statements initializing for all supported exchanges
 

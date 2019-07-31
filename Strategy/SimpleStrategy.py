@@ -1,13 +1,20 @@
+from Strategy.StrategyInterface import Strategy
 
-class SimpleStrategy:
+
+class SimpleStrategy(Strategy):
     """Simple template for creating signals on the data. """
-    def __init__(self, chart_history_bunch, current_data):
-        self.past_data = chart_history_bunch
-        self.current_data = current_data
+    def __init__(self, chart_history_bunch):
+        """Initialize the strategy with its ChartHistoryBunch"""
+        self.chart_history_bunch = chart_history_bunch
+
+    def prepare(self):
+        """Perform any initial computations. Train a nn, etc. """
+        pass
 
     def generate_signals(self):
+        """Generate all signals from the current data"""
+        pass
 
-
-    def update(self, ChartHistoryBunch_update_info):
-        """Update the corresponding data files to the next data. """
+    def update(self, update_info):
+        """Update the corresponding data files with any changes """
         pass

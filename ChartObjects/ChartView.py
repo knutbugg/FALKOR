@@ -2,8 +2,6 @@
 
 import plotly.graph_objects as go
 from Backtesting.HistoricalDataSaver import HistoricalDataSaver
-
-import pandas as pd
 from datetime import datetime
 
 

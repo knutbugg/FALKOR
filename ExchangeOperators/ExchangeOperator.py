@@ -1,5 +1,7 @@
-"""Abtract class"""
-class ExchangeOperator():
+"""Abstract class"""
+class ExchangeOperator:
+    """The ExchangeOperator is a class which works with an exchange api and
+    provides relevant calls to other parts of Falkor. """
     def get_market_depth(self, symbol):
         raise NotImplementedError
 

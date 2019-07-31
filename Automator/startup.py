@@ -8,7 +8,7 @@ creds = {'client_id': '5lJ0uGit9PuUxHka3hBWhPmsi7dWyxEwvEntUZFKmm0xfNz3VjHWi5WSr
 
 
 x = HistoricalDataFeed('binance', creds)
-data = x.historical_data('ETHBTC', '1d', '2018')
-x.save_historical_data(data, 'ethbtc-1D-lastyear.csv')
+data = x.historical_data('ETHBTC', '1h', 'last month')
+x.save_historical_data(data, 'ethbtc-1h-lastmonth.csv')
 
-ChartView.show_chart('ethbtc-1D-lastyear.csv', 'ETH/BTC', '1 Day')
+#ChartView.show_chart('ethbtc-1D-lastyear.csv', 'ETH/BTC', '1 Day')

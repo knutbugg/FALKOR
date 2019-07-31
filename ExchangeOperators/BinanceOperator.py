@@ -1,11 +1,14 @@
 from binance.client import Client
 from ExchangeOperators.ExchangeOperator import ExchangeOperator
+from Run.credentials import creds
+
 
 class BinanceOperator(ExchangeOperator):
-
-    def __init__(self, client_id, client_secret):
+    """Used to directly operate with the Binance exchange api. Has all relevant
+    api methods in their raw form. """
+    def __init__(self):
         """Initialize BinanceOperator with api credentials."""
-
+        client_id, client_secret = creds[0], creds[1]
         self.client = Client(client_id, client_secret)
 
     def get_market_depth(self, symbol):

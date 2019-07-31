@@ -1,7 +1,10 @@
 from TradeExecution.MoneyTrader import MoneyTrader
 from ExchangeOperators.BinanceOperator import BinanceOperator
 
+
 class BinanceMoneyTrader(MoneyTrader):
+    """TradeExecutor for the Binance cryptocurrency exchange"""
+
     def __init__(self, client_id, client_secret):
         self.op = BinanceOperator(client_id, client_secret)
 
