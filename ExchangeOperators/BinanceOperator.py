@@ -1,5 +1,5 @@
 from binance.client import Client
-
+from exchangeoperators.credentials import creds
 from exchangeoperators.ExchangeOperator import ExchangeOperator
 
 

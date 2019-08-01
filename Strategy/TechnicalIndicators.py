@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def sma(price_list, n):
     """Calculates the sma for each row in price_series and outputs sma_list
     containing the ma calculations
@@ -33,32 +36,32 @@ def ema(price_list, n):
     REPRESENTATION INVARIANTS:
         ema_list = len(price_list) - n
 
-    >>> s = SimpleStrategy('mock')
-    >>> s.ema([10, 20, 30, 40, 50, 60, 70, 80, 90, 100], 3)
-    [20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0]
+    >>> ema([10, 20, 30, 40, 50, 60, 70, 80, 90, 100], 3)
     """
     multi = (2 / (n + 1))
 
     # Initialize the first entries of ema_list with a sma
     ema_list = [1] * len(price_list)
-    sma_list = self.sma(price_list, n)[:n]
+    sma_list = sma(price_list, n)[:n]
 
-    for index, price in enumerate(price_list):
-        ema_list[index] = self._ema(sma_list, price_list, n, index, multi)
+    _ema(ema_list, sma_list, price_list, n, curr_index=0, multi=multi)
 
     return ema_list[n:]
 
 
-def _ema(sma, price_list, n, curr_index, multi):
+def _ema(ema_list, sma_list, price_list, n, curr_index, multi):
     """Recursive helper methods used to return the ema for price located
     inside price_list at curr_index"""
-    if curr_index < n:
-        return sma[curr_index]
-    else:
-        past_ema = self._ema(sma, price_list, n, curr_index - 1, multi)
-        ema = (price_list[curr_index] - (past_ema * multi)) + past_ema
-        return ema
 
+    while curr_index != len(ema_list):
+        if curr_index < n:
+            curr_ema = sma_list[curr_index]
+        else:
+            past_ema = ema_list[curr_index-1]
+            curr_ema = (price_list[curr_index] - (past_ema * multi)) + past_ema
+
+        ema_list[curr_index] = curr_ema
+        curr_index += 1
 
 def rsi(price_list, n):
     pass
@@ -71,8 +74,8 @@ def rsi(price_list, n):
     #     if index < n:
     #         last_n_periods.append(price)
     #     else:
-    #         avg_gain = self._compute_avg_gain(last_n_periods)
-    #         avg_loss = self._compute_avg_loss(last_n_periods)
+    #         avg_gain = _compute_avg_gain(last_n_periods)
+    #         avg_loss = _compute_avg_loss(last_n_periods)
     #         if index < 2*n:
     #             # Begin without Smooth RS since not enough data until 2n
     #             first_rs = avg_gain / avg_loss
@@ -116,11 +119,11 @@ def bollinger_bands(price_list, n, mult=2):
     >>> s.bollinger_bands([10, 20, 30, 40, 40, 41 ,42, 43, 44, 45, 45, 60, 80, 100], 3)
     """
     bb_list = []
-    sma = self.sma(price_list, n)
+    sma_list = sma(price_list, n)
 
     for index, price in enumerate(price_list[n:]):
         n_day_dev = np.std(price_list[index:index + n])
-        middle_band = sma[index]
+        middle_band = sma_list[index]
         upper_band = middle_band + (n_day_dev * mult)
         lower_band = middle_band - (n_day_dev * mult)
         bb_list.append([middle_band, upper_band, lower_band])
@@ -150,7 +153,7 @@ def obv(volume_list, price_list):
 
 
 def macd(price_list):
-    return self.ema(price_list, 12) - self.ema(price_list, 26)
+    return ema(price_list, 12) - ema(price_list, 26)
 
-def stochastic_oscillator(self):
+def stochastic_oscillator():
     pass

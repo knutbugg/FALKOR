@@ -54,3 +54,6 @@ class HistoricalDataFeed:
         hds = HistoricalDataSaver(loc)
         hds.save_data(data)
 
+
+x = HistoricalDataFeed('binance')
+x.save_historical_data(x.historical_data('ETHBTC', '1h', '2017'), '../data_small.csv')
