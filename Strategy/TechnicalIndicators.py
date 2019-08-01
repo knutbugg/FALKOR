@@ -147,13 +147,17 @@ def obv(volume_list, price_list):
             pass
         else:
             last_obv -= volume
-
+        
+        price_prev = price
         obv_list.append(last_obv)
     return obv_list
 
 
 def macd(price_list):
-    return ema(price_list, 12) - ema(price_list, 26)
+    
+    a = ema(price_list, 12) 
+    b = ema(price_list, 26)
+    return list(np.array(a[len(a)-len(b):]) - np.array(b))
 
 def stochastic_oscillator():
     pass
