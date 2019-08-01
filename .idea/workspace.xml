@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" line="66" />
+    <bookmark url="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" line="46" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
-      <change afterPath="$PROJECT_DIR$/Strategy/TINNStrategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Strategy/TechnicalIndicators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Strategy/TINN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strategy/SimpleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/SimpleStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strategy/StrategyInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/Strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy/TINNStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/TINNStrategy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TINNStrategy.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TINNStrategy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Strategy/TINNStrategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="46">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinanceOperator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinanceLiveDataFeed.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExchangeOperator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoricalDataFeed.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoricalDataSaver.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TINN.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Strategy/TINN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -41,7 +95,7 @@
       <file leaf-file-name="TechnicalIndicators.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Strategy/TechnicalIndicators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1395">
+            <state relative-caret-position="3123">
               <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
             </state>
           </provider>
@@ -52,33 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
               <caret line="139" selection-start-line="139" selection-end-line="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChartHistoryBunch.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TradeExecutor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TradeExecution/TradeExecutor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" selection-start-line="4" selection-end-line="26" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaperTrader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1886">
-              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -123,11 +150,9 @@
         <option value="$PROJECT_DIR$/Run/credentials.py" />
         <option value="$PROJECT_DIR$/Run/Automator.py" />
         <option value="$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py" />
-        <option value="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" />
         <option value="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" />
         <option value="$PROJECT_DIR$/ChartObjects/ChartView.py" />
         <option value="$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py" />
-        <option value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
         <option value="$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py" />
         <option value="$PROJECT_DIR$/Run/Account.py" />
         <option value="$PROJECT_DIR$/Strategy/StrategyInterface.py" />
@@ -140,6 +165,9 @@
         <option value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
         <option value="$PROJECT_DIR$/Strategy/TechnicalIndicators.py" />
         <option value="$PROJECT_DIR$/Strategy/TINNStrategy.py" />
+        <option value="$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py" />
+        <option value="$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py" />
+        <option value="$PROJECT_DIR$/Strategy/TINN.py" />
       </list>
     </option>
   </component>
@@ -466,13 +494,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TradeExecution/PaperTrader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2829">
-          <caret line="123" column="31" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TradeExecution/TradeExecutor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -613,45 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChartObjects/ChartView.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1737">
-          <caret line="89" column="17" lean-forward="true" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -735,15 +721,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Strategy/TechnicalIndicators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
+        <state relative-caret-position="3123">
           <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Strategy/TINNStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="46">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceLiveDataFeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/ExchangeOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtesting/HistoricalDataSaver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExchangeOperators/BinanceOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy/TINN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>

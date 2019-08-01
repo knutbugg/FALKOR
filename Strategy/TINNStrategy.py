@@ -1,6 +1,6 @@
 from Strategy.Strategy import Strategy
 from Strategy.TechnicalIndicators import sma, ema, macd, bollinger_bands, obv
-
+from Strategy.TINN import *
 import pandas as pd
 import numpy as np
 
@@ -23,7 +23,8 @@ class TINNStrategy(Strategy):
         """Perform any initial computations. Train a nn, etc. """
         """
         self.nn = NN()
-        results = self.nn.train(tech_indicators, historical_data, buy_sell_signals)
+        training_data = ...
+        results = self.nn.train(training_data, ... )
         print(results)
         
         """
