@@ -1,4 +1,4 @@
-def sma(self, price_list, n):
+def sma(price_list, n):
     """Calculates the sma for each row in price_series and outputs sma_list
     containing the ma calculations
     REPRESENTATION INVARIANTS:
@@ -27,7 +27,7 @@ def sma(self, price_list, n):
     return sma_list
 
 
-def ema(self, price_list, n):
+def ema(price_list, n):
     """Calculates the ema for each row in price_series and outputs ema_list
     containing the ema calculations
     REPRESENTATION INVARIANTS:
@@ -49,7 +49,7 @@ def ema(self, price_list, n):
     return ema_list[n:]
 
 
-def _ema(self, sma, price_list, n, curr_index, multi):
+def _ema(sma, price_list, n, curr_index, multi):
     """Recursive helper methods used to return the ema for price located
     inside price_list at curr_index"""
     if curr_index < n:
@@ -60,7 +60,7 @@ def _ema(self, sma, price_list, n, curr_index, multi):
         return ema
 
 
-def rsi(self, price_list, n):
+def rsi(price_list, n):
     pass
     # rsi_list = []
     # last_n_periods = []
@@ -82,7 +82,7 @@ def rsi(self, price_list, n):
     #             smoothed_rs = ((avg_gain * 13) + )
 
 
-def _compute_avg_gain(self, last_n_periods):
+def _compute_avg_gain(last_n_periods):
     """Returns the avg gain from a list of prices"""
     total_gain = 0
     n = len(last_n_periods)
@@ -95,7 +95,7 @@ def _compute_avg_gain(self, last_n_periods):
     return total_gain / n
 
 
-def _compute_avg_loss(self, last_n_periods):
+def _compute_avg_loss(last_n_periods):
     """Returns the avg loss from a list of prices"""
     total_loss = 0
     n = len(last_n_periods)
@@ -108,7 +108,7 @@ def _compute_avg_loss(self, last_n_periods):
     return total_loss / n
 
 
-def bollinger_bands(self, price_list, n, mult=2):
+def bollinger_bands(price_list, n, mult=2):
     """Returns the middle, upper, and lower, Bollinger Bands. Returns
     len(price_list) - n length list of bbs.
 
@@ -128,7 +128,7 @@ def bollinger_bands(self, price_list, n, mult=2):
     return bb_list
 
 
-def obv(self, volume_list, price_list):
+def obv(volume_list, price_list):
     """Returns obv_list contains the obv for each entry in price_list and
     volume_list. NOTE - no difference in len(volume_list) and (obv_list)
     """
@@ -149,7 +149,7 @@ def obv(self, volume_list, price_list):
     return obv_list
 
 
-def macd(self, price_list):
+def macd(price_list):
     return self.ema(price_list, 12) - self.ema(price_list, 26)
 
 def stochastic_oscillator(self):
