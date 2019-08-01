@@ -1,6 +1,6 @@
-from Strategy.Strategy import Strategy
-from Strategy.TechnicalIndicators import sma, ema, macd, bollinger_bands, obv
-from Strategy.TINN import *
+from strategy.Strategy import Strategy
+from strategy.TechnicalIndicators import sma, ema, macd, bollinger_bands, obv
+from strategy.TINN import *
 import pandas as pd
 import numpy as np
 

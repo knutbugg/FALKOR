@@ -1,8 +1,9 @@
 """Displaying a trading chart. """
 
 import plotly.graph_objects as go
-from Backtesting.HistoricalDataSaver import HistoricalDataSaver
 from datetime import datetime
+
+from backtesting.HistoricalDataSaver import HistoricalDataSaver
 
 
 def show_chart(path, symbol, duration):

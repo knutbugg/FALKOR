@@ -1,6 +1,6 @@
 from binance.client import Client
-from ExchangeOperators.ExchangeOperator import ExchangeOperator
-from Run.credentials import creds
+
+from exchangeoperators.ExchangeOperator import ExchangeOperator
 
 
 class BinanceOperator(ExchangeOperator):

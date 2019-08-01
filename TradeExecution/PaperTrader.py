@@ -1,5 +1,5 @@
-from TradeExecution.TradeExecutor import TradeExecutor
-from ExchangeOperators.BinanceOperator import BinanceOperator
+from tradeexecution.TradeExecutor import TradeExecutor
+from exchangeoperators.BinanceOperator import BinanceOperator
 
 
 class PaperTrader(TradeExecutor):

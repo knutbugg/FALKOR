@@ -1,5 +1,7 @@
-from ExchangeOperators.BinanceOperator import BinanceOperator
 from binance.client import Client
+
+from exchangeoperators.BinanceOperator import BinanceOperator
+
 
 class BinanceLiveDataFeed:
     """LiveDataFeed for Binance Exchange. Provides .pull() method that pulls

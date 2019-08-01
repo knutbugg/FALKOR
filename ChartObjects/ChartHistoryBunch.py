@@ -1,7 +1,7 @@
-from pathlib import Path
-from Backtesting.HistoricalDataSaver import HistoricalDataSaver
 import pandas as pd
-from ExchangeOperators.BinanceLiveDataFeed import BinanceLiveDataFeed
+
+from backtesting.HistoricalDataSaver import HistoricalDataSaver
+from exchangeoperators.BinanceLiveDataFeed import BinanceLiveDataFeed
 
 
 class ChartHistoryBunch:

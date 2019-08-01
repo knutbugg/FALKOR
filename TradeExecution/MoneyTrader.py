@@ -1,4 +1,4 @@
-from TradeExecution.TradeExecutor import TradeExecutor
+from tradeexecution.TradeExecutor import TradeExecutor
 
 
 class MoneyTrader(TradeExecutor):

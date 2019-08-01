@@ -1,6 +1,8 @@
-from Strategy.Strategy import Strategy
 import pandas as pd
 import numpy as np
+
+from strategy.Strategy import Strategy
+
 
 class SimpleStrategy(Strategy):
     """Simple template for creating signals on the data. """

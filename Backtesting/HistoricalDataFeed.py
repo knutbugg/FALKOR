@@ -1,6 +1,8 @@
-from ExchangeOperators.BinanceOperator import BinanceOperator
-from Backtesting.HistoricalDataSaver import HistoricalDataSaver
 from binance.client import Client
+
+from backtesting.HistoricalDataSaver import HistoricalDataSaver
+from exchangeoperators.BinanceOperator import BinanceOperator
+
 
 class HistoricalDataFeed:
     """Used to get historial candlestick data and save it into a .csv file"""

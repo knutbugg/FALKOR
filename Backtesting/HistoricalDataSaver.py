@@ -1,9 +1,6 @@
 import pandas as pd
 from pathlib import Path
 
-
-
-
 class HistoricalDataSaver:
     """Saves Historical Candlestick data to a .csv file. Can also load up the
     data. """

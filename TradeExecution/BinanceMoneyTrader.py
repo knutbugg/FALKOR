@@ -1,5 +1,5 @@
-from TradeExecution.MoneyTrader import MoneyTrader
-from ExchangeOperators.BinanceOperator import BinanceOperator
+from tradeexecution.MoneyTrader import MoneyTrader
+from exchangeoperators.BinanceOperator import BinanceOperator
 
 
 class BinanceMoneyTrader(MoneyTrader):
