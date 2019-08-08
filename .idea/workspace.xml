@@ -2,13 +2,12 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py" line="43" />
+    <bookmark url="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/TradingSignalLabellingTool.py" line="27" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
+      <change afterPath="$PROJECT_DIR$/tools/trading-signal-labelling-tool/TradingSignalLabellingTool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChartObjects/ChartView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChartObjects/ChartView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strategy/TINN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/TINN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strategy/training_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy/training_data.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,35 +21,35 @@
       <file leaf-file-name="HistoricalDataFeed.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataFeed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
+            <state relative-caret-position="23">
               <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinanceMoneyTrader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tradeexecution/BinanceMoneyTrader.py">
+      <file leaf-file-name="TradingSignalLabellingTool.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/TradingSignalLabellingTool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="313">
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Strategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy/Strategy.py">
+      <file leaf-file-name="_subplots.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/axes/_subplots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="193">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HistoricalDataSaver.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py">
+      <file leaf-file-name="figure.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/figure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="193">
+              <caret line="1413" selection-start-line="1413" selection-end-line="1413" />
             </state>
           </provider>
         </entry>
@@ -73,11 +72,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TINN.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TINN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy/TINN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
               <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widgets.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/widgets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="2545" selection-start-line="2545" selection-end-line="2545" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/cbook/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="215" selection-start-line="215" selection-end-line="215" />
             </state>
           </provider>
         </entry>
@@ -97,6 +114,7 @@
       <find>plugins</find>
       <find>sea</find>
       <find>self.</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>Client</replace>
@@ -156,14 +174,17 @@
         <option value="$PROJECT_DIR$/strategy/TechnicalIndicators.py" />
         <option value="$PROJECT_DIR$/chartobjects/ChartView.py" />
         <option value="$PROJECT_DIR$/strategy/TINN.py" />
+        <option value="$PROJECT_DIR$/tools/trading-signal-labelling-tool/lasso_test.py" />
+        <option value="$PROJECT_DIR$/tools/trading-signal-labelling-tool/run.py" />
+        <option value="$PROJECT_DIR$/tools/trading-signal-labelling-tool/TradingSignalLabellingTool.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1552" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -195,7 +216,13 @@
             <path>
               <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Falkor" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="trading-signal-labelling-tool" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
@@ -210,6 +237,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Vladimir Dyagilev/Documents/Development/venv/Lib/site-packages/matplotlib/pyplot.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -237,7 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ChartView">
+  <component name="RunManager" selected="Python.run">
     <configuration name="ChartView" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -274,39 +302,41 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Doctest SimpleStrategy.bb" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="lasso_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/trading-signal-labelling-tool" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
-      <option name="CLASS_NAME" value="SimpleStrategy" />
-      <option name="METHOD_NAME" value="bb" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/trading-signal-labelling-tool/lasso_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Doctest SimpleStrategy.obv" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Falkor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/trading-signal-labelling-tool" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy/SimpleStrategy.py" />
-      <option name="CLASS_NAME" value="SimpleStrategy" />
-      <option name="METHOD_NAME" value="obv" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="SCRIPT_NAME" value="C:\Users\Vladimir Dyagilev\Documents\Development\Falkor\tools\trading-signal-labelling-tool\TradingSignalLabellingTool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="Doctest ema" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="Falkor" />
@@ -326,19 +356,19 @@
       <option name="USE_PATTERN" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Doctest SimpleStrategy.bb" />
-      <item itemvalue="Python tests.Doctest SimpleStrategy.obv" />
       <item itemvalue="Python.HistoricalDataFeed" />
       <item itemvalue="Python tests.Doctest ema" />
       <item itemvalue="Python.ChartView" />
+      <item itemvalue="Python.run" />
+      <item itemvalue="Python.lasso_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.lasso_test" />
         <item itemvalue="Python.ChartView" />
         <item itemvalue="Python tests.Doctest ema" />
         <item itemvalue="Python.HistoricalDataFeed" />
-        <item itemvalue="Python tests.Doctest SimpleStrategy.obv" />
-        <item itemvalue="Python tests.Doctest SimpleStrategy.bb" />
       </list>
     </recent_temporary>
   </component>
@@ -396,19 +426,19 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.11764706" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.09378293" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298109" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32888147" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.6778976" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32881" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.34237996" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32258064" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4321503" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.36596218" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.36572623" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -481,56 +511,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/strategy/SimpleStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataFeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/ChartHistoryBunch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Active.py" />
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Chart_Completed.py" />
-    <entry file="file://$PROJECT_DIR$/chartobjects/Candle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exchangeoperators/BinanceOperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChartObjects/Credentials.py" />
-    <entry file="file://$PROJECT_DIR$/Run.py" />
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/binance/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -567,13 +551,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Run/ethbtc-1D-lastyear.csv" />
-    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="3946" selection-start-line="3946" selection-end-line="3946" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/indexes/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -701,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataFeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="851">
@@ -733,6 +703,90 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/pkgs/matplotlib-2.1.2-py36h016c42a_0/Lib/site-packages/matplotlib/collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="657" column="8" selection-start-line="657" selection-start-column="8" selection-end-line="657" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/lasso_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtesting/HistoricalDataFeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="5179" selection-start-line="5179" selection-end-line="5179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/cbook/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/widgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="2545" selection-start-line="2545" selection-end-line="2545" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="425" column="4" selection-start-line="425" selection-start-column="4" selection-end-line="425" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/data_small.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/axes/_subplots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/matplotlib/figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1413" selection-start-line="1413" selection-end-line="1413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/file.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-189773" />
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/trading-signal-labelling-tool/TradingSignalLabellingTool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
