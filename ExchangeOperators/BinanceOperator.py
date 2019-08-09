@@ -1,7 +1,7 @@
 from binance.client import Client
 from exchangeoperators.credentials import creds
 from exchangeoperators.ExchangeOperator import ExchangeOperator
-
+import pandas as pd
 
 class BinanceOperator(ExchangeOperator):
     """Used to directly operate with the Binance exchange api. Has all relevant
@@ -64,13 +64,21 @@ class BinanceOperator(ExchangeOperator):
 
     def get_historical_candlesticks(self, symbol, interval, start_time,
                                     end_time=None):
+        """Returns candlestick data in the form
+        ['time', 'open', 'high', 'low', 'close', 'volume']
+        """
         if end_time is None:
             candles = self.client.get_historical_klines(symbol, interval,
                                                         start_time)
         else:
             candles = self.client.get_historical_klines(symbol, interval,
                                                         start_time, end_time)
-        return candles
+
+        data_df = pd.DataFrame(candles, columns=['time', 'open', 'high', 'low', 'close',
+                                   'volume', 'close_time','quote_asset_volume',
+                                   'num_trades', 'tkbbav', 'tkqav', 'ign.'])
+        data_df = data_df[['time', 'open', 'high', 'low', 'close', 'volume']]
+        return data_df
 
     def get_account_info(self):
         return self.client.get_account()
