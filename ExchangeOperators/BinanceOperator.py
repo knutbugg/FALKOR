@@ -3,6 +3,10 @@ from exchangeoperators.credentials import creds
 from exchangeoperators.ExchangeOperator import ExchangeOperator
 import pandas as pd
 
+
+def type_format_df(df, wanted_type):
+    return df.applymap(wanted_type)
+
 class BinanceOperator(ExchangeOperator):
     """Used to directly operate with the Binance exchange api. Has all relevant
     api methods in their raw form. """
@@ -78,6 +82,8 @@ class BinanceOperator(ExchangeOperator):
                                    'volume', 'close_time','quote_asset_volume',
                                    'num_trades', 'tkbbav', 'tkqav', 'ign.'])
         data_df = data_df[['time', 'open', 'high', 'low', 'close', 'volume']]
+        # Convert all numbers from str to float
+        data_df = type_format_df(data_df, float)
         return data_df
 
     def get_account_info(self):

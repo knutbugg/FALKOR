@@ -41,27 +41,20 @@ def ema(price_list, n):
     multi = (2 / (n + 1))
 
     # Initialize the first entries of ema_list with a sma
-    ema_list = [1] * len(price_list)
+    ema_list = [0] * len(price_list)
     sma_list = sma(price_list, n)[:n]
 
-    _ema(ema_list, sma_list, price_list, n, curr_index=0, multi=multi)
+    for i in range(len(ema_list)):
+        if i < n:
+            curr_ema = sma_list[i]
+        else:
+            past_ema = ema_list[i-1]
+            curr_ema = (price_list[i] - (past_ema * multi)) + past_ema
+
+        ema_list[i] = curr_ema
 
     return ema_list[n:]
 
-
-def _ema(ema_list, sma_list, price_list, n, curr_index, multi):
-    """Recursive helper methods used to return the ema for price located
-    inside price_list at curr_index"""
-
-    while curr_index != len(ema_list):
-        if curr_index < n:
-            curr_ema = sma_list[curr_index]
-        else:
-            past_ema = ema_list[curr_index-1]
-            curr_ema = (price_list[curr_index] - (past_ema * multi)) + past_ema
-
-        ema_list[curr_index] = curr_ema
-        curr_index += 1
 
 def rsi(price_list, n):
     pass
@@ -126,7 +119,7 @@ def bollinger_bands(price_list, n, mult=2):
         middle_band = sma_list[index]
         upper_band = middle_band + (n_day_dev * mult)
         lower_band = middle_band - (n_day_dev * mult)
-        bb_list.append([middle_band, upper_band, lower_band])
+        bb_list.append([lower_band, middle_band, upper_band])
 
     return bb_list
 
@@ -147,16 +140,16 @@ def obv(volume_list, price_list):
             pass
         else:
             last_obv -= volume
-        
+
         price_prev = price
         obv_list.append(last_obv)
     return obv_list
 
 
 def macd(price_list):
-    
-    a = ema(price_list, 12) 
-    b = ema(price_list, 26)
+
+    a = ema(price_list, 12)
+    b = ema(price_list, 24)
     return list(np.array(a[len(a)-len(b):]) - np.array(b))
 
 def stochastic_oscillator():
