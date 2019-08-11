@@ -7,6 +7,7 @@ from itertools import compress
 
 from sklearn.preprocessing import StandardScaler
 
+from mpl_finance import candlestick2_ochl
 
 class Charting:
     """Create customizable financial price charts, with technical indicators.
@@ -42,55 +43,66 @@ class Charting:
 
         self.tech_inds = tech_inds
 
-    def chart_to_image(self):
+    def chart_to_image(self, file_name):
         """Creates the specified chart and saves it to an image. """
 
         # Create axis for the price and technical indicator graph
-        ax1 = self.fig.add_subplot(311)
-
-        # Turn off the axes and background lines
+        ax0 = self.fig.add_subplot(411)
         plt.axis('off')
-        # Plot price and technical indicators
-        self.df.plot(x=self.col_label, y=self.row_label, ax=ax1, color='black', label='_nolegend_')
+
+        # Plot Price
+        self.df.plot(x=self.col_label, y=self.row_label, ax=ax0, color='black', label='_nolegend_', linewidth=5)
 
         # Plot Technical Indicators
         if self.tech_inds:
             for col_name in self.tech_inds:
                 ti_df = self.df[['time', col_name]].copy()
-                ti_df.plot(x='time', y=col_name, ax=ax1, label='_nolegend_')
+                ti_df.plot(x='time', y=col_name, ax=ax0, label='_nolegend_')
+
 
         # Plot Volume as Bar Chart on the bottom
+        # Turn off the axes and background lines
+        ax1 = self.fig.add_subplot(412)
+        plt.axis('off')
+
+        # Plot candlesticks
+        candlestick2_ochl(width=0.4, colorup='g', colordown='r',
+                          ax=ax1, opens=self.df['open'],
+                          closes=self.df['close'],
+                          highs=self.df['high'], lows=self.df['low'], )
+
 
         # Create axis for the volume bar chart
-        ax2 = self.fig.add_subplot(312)
+        ax2 = self.fig.add_subplot(413)
 
 
         time_list = self.x
         volume_list = self.df.volume.tolist()
 
-        # Need to scale volume dataset into the same scale as the financial data
-        max_price = self.df[self.row_label].max()
-        min_price = 0
-
-        # To scale variable x from dataset X into range [a,b] we use:
-        # x_norm = ( (b-a) * ( (x-min(X)) / (max(X)-min(X)) ) + a
-        norm_volume_list = []
-        for i in range(len(volume_list)):
-            x_norm = ( (max_price-min_price) * ( (volume_list[i]-min(volume_list)) / (max(volume_list)-min(volume_list)) ) + min_price)
-            norm_volume_list.append(x_norm)
+        norm_volume_list = normalize_by_dataset(volume_list, self.y, from_origin=True)
 
         # Plot the volume graph
         plt.axis('off')
         vol_df = pd.DataFrame(list(zip(time_list, norm_volume_list)), columns=['time', 'volume'])
         vol_df.plot.bar(x='time', y='volume', ax=ax2, label='_nolegend_')
 
+
+
         # Create axis for special technical indicators, obv, macd, etc.
-        ax3 = self.fig.add_subplot(313)
+        ax3 = self.fig.add_subplot(414)
+        plt.axis('off')
 
+        # Normalize macd
+        macd_list = self.df['macd'].tolist()
+        norm_macd_list = normalize_by_dataset(macd_list, self.y, from_origin=True)
 
+        # Plot the macd graph
+        vol_df = pd.DataFrame(list(zip(time_list, norm_macd_list)),
+                              columns=['time', 'macd'])
+        vol_df.plot(x='time', y='macd', ax=ax3, label='_nolegend_')
 
         # Save to an image
-        plt.savefig('chart_image.png', legend=False, bbox_inches='tight')
+        plt.savefig(file_name, legend=False, bbox_inches='tight')
 
     def label_chart(self, csv_path):
         """Show and Label the Chart. Call this method. """
@@ -233,3 +245,31 @@ class Charting:
         # Draw the chart
         plt.draw()
 
+
+def normalize_by_dataset(list1, list2, from_origin=False):
+    """Normalize list1 to be in the same interval
+    as list2 [0 - max(list2)]"""
+
+    if not from_origin:
+        # To scale variable x from dataset X into range [a,b] we use:
+        # x_norm = ( (b-a) * ( (x-min(X)) / (max(X)-min(X)) ) + a
+        normalized_list1 = []
+        for i in range(len(list1)):
+            x_norm = ((max(list2) - min(list2)) * (
+                        (list1[i] - min(list1)) / (
+                            max(list1) - min(
+                        list1))) + min(list2))
+            normalized_list1.append(x_norm)
+
+        return normalized_list1
+
+    else:
+        normalized_list1 = []
+        for i in range(len(list1)):
+            x_norm = ((max(list2) - 0) * (
+                    (list1[i] - min(list1)) / (
+                    max(list1) - min(
+                list1))) + 0)
+            normalized_list1.append(x_norm)
+
+        return normalized_list1
