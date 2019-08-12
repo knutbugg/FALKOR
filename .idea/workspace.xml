@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py" line="40" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
-      <change afterPath="$PROJECT_DIR$/Strategy/SC-CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TINNStrategy.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TINNStrategy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy/TINNStrategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            <state relative-caret-position="87">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -54,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="label_chart_data.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="label_chart_data.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="322">
+              <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -148,10 +145,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="3025" />
+    <option name="height" value="1103" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -385,17 +382,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49899396" visible="true" weight="0.1264489" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49899396" visible="true" weight="0.15862525" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32884097" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32793522" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.20250522" />
       <window_info id="Structure" order="0" sideWeight="0.501006" side_tool="true" weight="0.15862525" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4290188" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.55390835" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.36572623" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -654,17 +651,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
+    <entry file="file://$PROJECT_DIR$/strategy/TINNStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="87">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strategy/TINNStrategy.py">
+    <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="60" />
         </state>
       </provider>
     </entry>
