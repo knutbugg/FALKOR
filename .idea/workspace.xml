@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/backtesting/HistoricalDataSaver.py" line="40" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file." />
+    <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chartobjects/Charting.py" beforeDir="false" afterPath="$PROJECT_DIR$/chartobjects/Charting.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,22 +45,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Charting.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Charting.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+            <state relative-caret-position="622">
+              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="label_chart_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="label_chart_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="60" />
+              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mpl_finance.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strategy/mpl_finance.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -90,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Run/credentials.py" />
         <option value="$PROJECT_DIR$/Run/Automator.py" />
         <option value="$PROJECT_DIR$/ChartObjects/ChartHistoryBunch.py" />
         <option value="$PROJECT_DIR$/Backtesting/HistoricalDataFeed.py" />
@@ -136,11 +143,12 @@
         <option value="$PROJECT_DIR$/chartobjects/labeltool.py" />
         <option value="$PROJECT_DIR$/exchangeoperators/BinanceOperator.py" />
         <option value="$PROJECT_DIR$/strategy/TechnicalIndicators.py" />
-        <option value="$PROJECT_DIR$/chartobjects/Charting.py" />
         <option value="$PROJECT_DIR$/strategy/LSTM-CNN.py" />
         <option value="$PROJECT_DIR$/strategy/SC-CNN.py" />
         <option value="$PROJECT_DIR$/chartobjects/label_chart_data.py" />
         <option value="$PROJECT_DIR$/strategy/TINNStrategy.py" />
+        <option value="$PROJECT_DIR$/strategy/mpl_finance.py" />
+        <option value="$PROJECT_DIR$/chartobjects/Charting.py" />
       </list>
     </option>
   </component>
@@ -451,13 +459,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tradeexecution/MoneyTrader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tradeexecution/TradeExecutor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -627,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy/TINN.py" />
     <entry file="file://$PROJECT_DIR$/strategy/LSTM-CNN.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -661,7 +655,17 @@
     <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="60" />
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy/mpl_finance.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
         </state>
       </provider>
     </entry>

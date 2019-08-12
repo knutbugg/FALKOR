@@ -5,9 +5,186 @@ from matplotlib.path import Path
 import pandas as pd
 from itertools import compress
 
-from sklearn.preprocessing import StandardScaler
+import numpy as np
+from matplotlib import colors as mcolors
+from matplotlib.collections import LineCollection, PolyCollection
+from matplotlib.lines import TICKLEFT, TICKRIGHT, Line2D
+from matplotlib.patches import Rectangle
+from matplotlib.transforms import Affine2D
 
-from mpl_finance import candlestick2_ochl
+from six.moves import xrange, zip
+
+def _check_input(opens, closes, highs, lows, miss=-1):
+    """Checks that *opens*, *highs*, *lows* and *closes* have the same length.
+    NOTE: this code assumes if any value open, high, low, close is
+    missing (*-1*) they all are missing
+    Parameters
+    ----------
+    ax : `Axes`
+        an Axes instance to plot to
+    opens : sequence
+        sequence of opening values
+    highs : sequence
+        sequence of high values
+    lows : sequence
+        sequence of low values
+    closes : sequence
+        sequence of closing values
+    miss : int
+        identifier of the missing data
+    Raises
+    ------
+    ValueError
+        if the input sequences don't have the same length
+    """
+
+    def _missing(sequence, miss=-1):
+        """Returns the index in *sequence* of the missing data, identified by
+        *miss*
+        Parameters
+        ----------
+        sequence :
+            sequence to evaluate
+        miss :
+            identifier of the missing data
+        Returns
+        -------
+        where_miss: numpy.ndarray
+            indices of the missing data
+        """
+        return np.where(np.array(sequence) == miss)[0]
+
+    same_length = len(opens) == len(highs) == len(lows) == len(closes)
+    _missopens = _missing(opens)
+    same_missing = ((_missopens == _missing(highs)).all() and
+                    (_missopens == _missing(lows)).all() and
+                    (_missopens == _missing(closes)).all())
+
+    if not (same_length and same_missing):
+        msg = ("*opens*, *highs*, *lows* and *closes* must have the same"
+               " length. NOTE: this code assumes if any value open, high,"
+               " low, close is missing (*-1*) they all must be missing.")
+        raise ValueError(msg)
+
+def candlestick2_ochl(ax, opens, closes, highs, lows, width=4,
+                      colorup='k', colordown='r',
+                      alpha=0.75):
+    """Represent the open, close as a bar line and high low range as a
+    vertical line.
+    Preserves the original argument order.
+    Parameters
+    ----------
+    ax : `Axes`
+        an Axes instance to plot to
+    opens : sequence
+        sequence of opening values
+    closes : sequence
+        sequence of closing values
+    highs : sequence
+        sequence of high values
+    lows : sequence
+        sequence of low values
+    width : int
+        size of open and close ticks in points
+    colorup : color
+        the color of the lines where close >= open
+    colordown : color
+        the color of the lines where close <  open
+    alpha : float
+        bar transparency
+    Returns
+    -------
+    ret : tuple
+        (lineCollection, barCollection)
+    """
+
+    return candlestick2_ohlc(ax, opens, highs, lows, closes, width=width,
+                             colorup=colorup, colordown=colordown,
+                             alpha=alpha)
+
+
+def candlestick2_ohlc(ax, opens, highs, lows, closes, width=4,
+                      colorup='k', colordown='r',
+                      alpha=0.75):
+    """Represent the open, close as a bar line and high low range as a
+    vertical line.
+    NOTE: this code assumes if any value open, low, high, close is
+    missing they all are missing
+    Parameters
+    ----------
+    ax : `Axes`
+        an Axes instance to plot to
+    opens : sequence
+        sequence of opening values
+    highs : sequence
+        sequence of high values
+    lows : sequence
+        sequence of low values
+    closes : sequence
+        sequence of closing values
+    width : int
+        size of open and close ticks in points
+    colorup : color
+        the color of the lines where close >= open
+    colordown : color
+        the color of the lines where close <  open
+    alpha : float
+        bar transparency
+    Returns
+    -------
+    ret : tuple
+        (lineCollection, barCollection)
+    """
+
+    _check_input(opens, highs, lows, closes)
+
+    delta = width / 2.
+    barVerts = [((i - delta, open),
+                 (i - delta, close),
+                 (i + delta, close),
+                 (i + delta, open))
+                for i, open, close in zip(xrange(len(opens)), opens, closes)
+                if open != -1 and close != -1]
+
+    rangeSegments = [((i, low), (i, high))
+                     for i, low, high in zip(xrange(len(lows)), lows, highs)
+                     if low != -1]
+
+    colorup = mcolors.to_rgba(colorup, alpha)
+    colordown = mcolors.to_rgba(colordown, alpha)
+    colord = {True: colorup, False: colordown}
+    colors = [colord[open < close]
+              for open, close in zip(opens, closes)
+              if open != -1 and close != -1]
+
+    useAA = 0,  # use tuple here
+    lw = 0.5,   # and here
+    rangeCollection = LineCollection(rangeSegments,
+                                     colors=colors,
+                                     linewidths=lw,
+                                     antialiaseds=useAA,
+                                     )
+
+    barCollection = PolyCollection(barVerts,
+                                   facecolors=colors,
+                                   edgecolors=colors,
+                                   antialiaseds=useAA,
+                                   linewidths=lw,
+                                   )
+
+    minx, maxx = 0, len(rangeSegments)
+    miny = min([low for low in lows if low != -1])
+    maxy = max([high for high in highs if high != -1])
+
+    corners = (minx, miny), (maxx, maxy)
+    ax.update_datalim(corners)
+    ax.autoscale_view()
+
+    # add these last
+    ax.add_collection(rangeCollection)
+    ax.add_collection(barCollection)
+    return rangeCollection, barCollection
+
 
 class Charting:
     """Create customizable financial price charts, with technical indicators.
