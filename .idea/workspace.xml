@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed99f875-5b59-4b34-96a3-2f8a3de19a40" name="Default" comment="Added fundamental structure of Falkor. Added classes handling pulling historical data from Exchanges, specifically Binance. Created classes used to save and load historical candlestick data from a .csv file.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chartobjects/Charting.py" beforeDir="false" afterPath="$PROJECT_DIR$/chartobjects/Charting.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/strategy/TINNStrategy.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -48,8 +47,8 @@
       <file leaf-file-name="Charting.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+            <state relative-caret-position="200">
+              <caret line="283" column="73" selection-start-line="283" selection-start-column="73" selection-end-line="283" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -57,8 +56,8 @@
       <file leaf-file-name="label_chart_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="125">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -145,9 +144,9 @@
         <option value="$PROJECT_DIR$/strategy/TechnicalIndicators.py" />
         <option value="$PROJECT_DIR$/strategy/LSTM-CNN.py" />
         <option value="$PROJECT_DIR$/strategy/SC-CNN.py" />
-        <option value="$PROJECT_DIR$/chartobjects/label_chart_data.py" />
         <option value="$PROJECT_DIR$/strategy/TINNStrategy.py" />
         <option value="$PROJECT_DIR$/strategy/mpl_finance.py" />
+        <option value="$PROJECT_DIR$/chartobjects/label_chart_data.py" />
         <option value="$PROJECT_DIR$/chartobjects/Charting.py" />
       </list>
     </option>
@@ -174,12 +173,7 @@
             <path>
               <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Falkor" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Falkor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Falkor" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
+              <item name="chartobjects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -398,7 +392,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32884097" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32793522" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" weight="0.20250522" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49905482" visible="true" weight="0.20215634" />
       <window_info id="Structure" order="0" sideWeight="0.501006" side_tool="true" weight="0.15862525" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.55390835" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -618,9 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/chart_image.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy/TradingSignals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -648,24 +639,27 @@
     <entry file="file://$PROJECT_DIR$/strategy/TINNStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy/mpl_finance.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chartobjects/chart_image.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        <state relative-caret-position="200">
+          <caret line="283" column="73" selection-start-line="283" selection-start-column="73" selection-end-line="283" selection-end-column="73" />
         </state>
       </provider>
     </entry>

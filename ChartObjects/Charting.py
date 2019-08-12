@@ -279,7 +279,9 @@ class Charting:
         vol_df.plot(x='time', y='macd', ax=ax3, label='_nolegend_')
 
         # Save to an image
-        plt.savefig(file_name, legend=False, bbox_inches='tight')
+
+        # low dpi and low quality
+        plt.savefig(file_name, legend=False, bbox_inches='tight', dpi=45)
 
     def label_chart(self, csv_path):
         """Show and Label the Chart. Call this method. """

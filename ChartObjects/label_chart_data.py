@@ -5,6 +5,7 @@ from exchangeoperators.BinanceOperator import BinanceOperator
 from strategy.TechnicalIndicators import ema, sma, bollinger_bands, macd, obv
 
 
+from strategy.TINNStrategy import prepare_data
 
 
 operator = BinanceOperator()
