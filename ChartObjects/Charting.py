@@ -4,6 +4,7 @@ from matplotlib.path import Path
 
 import pandas as pd
 from itertools import compress
+from PIL import Image
 
 import numpy as np
 from matplotlib import colors as mcolors
@@ -228,7 +229,7 @@ class Charting:
         plt.axis('off')
 
         # Plot Price
-        self.df.plot(x=self.col_label, y=self.row_label, ax=ax0, color='black', label='_nolegend_', linewidth=5)
+        self.df.plot(x=self.col_label, y=self.row_label, ax=ax0, color='black', label='_nolegend_', linewidth=3)
 
         # Plot Technical Indicators
         if self.tech_inds:
@@ -282,6 +283,11 @@ class Charting:
 
         # low dpi and low quality
         plt.savefig(file_name, legend=False, bbox_inches='tight', dpi=45)
+
+        # Resize to 230, 175
+        with Image.open(file_name) as img:
+            img = img.resize((230, 175), Image.ANTIALIAS)
+            img.save(file_name)
 
     def label_chart(self, csv_path):
         """Show and Label the Chart. Call this method. """

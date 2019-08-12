@@ -47,8 +47,8 @@
       <file leaf-file-name="Charting.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="283" column="73" selection-start-line="283" selection-start-column="73" selection-end-line="283" selection-end-column="73" />
+            <state relative-caret-position="449">
+              <caret line="288" column="57" selection-start-line="288" selection-start-column="57" selection-end-line="288" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -387,12 +387,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49899396" visible="true" weight="0.15862525" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49899396" visible="true" weight="0.15862525" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50094515" side_tool="true" weight="0.2797553" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32884097" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32793522" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49905482" visible="true" weight="0.20215634" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49905482" visible="true" weight="0.20215634" />
       <window_info id="Structure" order="0" sideWeight="0.501006" side_tool="true" weight="0.15862525" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.55390835" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -646,6 +646,9 @@
     <entry file="file://$PROJECT_DIR$/strategy/mpl_finance.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/chartobjects/chart_image.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/chartobjects/label_chart_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -653,13 +656,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chartobjects/chart_image.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chartobjects/Charting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="283" column="73" selection-start-line="283" selection-start-column="73" selection-end-line="283" selection-end-column="73" />
+        <state relative-caret-position="449">
+          <caret line="288" column="57" selection-start-line="288" selection-start-column="57" selection-end-line="288" selection-end-column="57" />
         </state>
       </provider>
     </entry>
