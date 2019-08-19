@@ -8,8 +8,8 @@ class APIWrapper:
 
 		raise NotImplementedError
 
-	def last_candle(self, symbol, interval):
-		"""Returns DataFrame containing the last candlestick information"""
+	def last_candles(self, symbol, interval):
+		"""Returns DataFrame containing the most recent candlesticks information"""
 
 		raise NotImplementedError
 

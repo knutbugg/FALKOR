@@ -34,9 +34,11 @@ class BinanceWrapper(APIWrapper):
 
 		return data_df
 
-	def last_candle(self, symbol, interval):
+	def last_candles(self, num, symbol, interval):
 		"""Returns DataFrame with columns =['time', 'open', 'close', 'high', 'low', 'volume']
 		with only one row for the last candle created
+
+		NOTE: only goes back to num*interval candles max
 
 		>>> id = 'nBjgb83VMNvqq45b3JdWUIsJDalWlXxHI2bvDz9oLdW7KgOLPvJCp30CHnthjfNJ'
 		>>> sec = '5bBN7s7h37kUvmGIpF9FTAtspBY93WirwhTh39PV7AlKSlUE2S4EEe9b3OZVYIqd'
@@ -55,7 +57,7 @@ class BinanceWrapper(APIWrapper):
 										'ign.'])
 
 		data_df = data_df[['time', 'open', 'high', 'low', 'close', 'volume']]
-		data_df = data_df.iloc[data_df.shape[0]-1:, :] # take only last row
+		data_df = data_df.iloc[data_df.shape[0]-num:, :] # take only last row
 
 		# Convert all numbers from str to float
 		data_df = data_df.applymap(float)

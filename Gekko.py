@@ -18,6 +18,7 @@ class Gekko:
 			- An instance of BookWorm class used for pulling live data from APIWrappers
 
 	"""
+
 	def __init__(portfolio):
 		"""Initialize Gekko"""
 		
@@ -25,18 +26,25 @@ class Gekko:
 		self.bud_fox = BudFox()
 		self.book_worm = BookWorm()
 
-	def _trade(security: str, strategy, api_wrapper):
+	def _trade(security: str, interval: str, strategy, api_wrapper):
 		"""Helper method for self.trade_portfolio(). Runs strategy for security and sends signals to api_wrapper"""
 		
+		# Get 30 most recent candles of data
+		last_candles = self.book_worm.last_candles(30, api_wrapper, security, interval)
 
+		# Get trading signals from strategy
+		strategy.feed_data(last_candles)
+		signals = strategy.generate_signals()
+		strategy.update()
+
+		# Send signals to BudFox for realization
+		self.bud_fox.receive_trading_signals(signals)
+		self.bud_fox.realize_signals()
 
 	def trade_portfolio():
 		"""Iterates through every security in self.portfolio, using their specified Strategy and APIWrapper"""
 
 		for security, specs_list in self.portfolio:
-			security, strategy, api_wrapper = security, specs_list[0], specs_list[1]
+			interval, strategy, api_wrapper = specs_list[0], specs_list[1], specs_list[2]
 
-			self._trade(security, strategy, api_wrapper)
-
-
-g = Gekko(Portfolio())
+			self._trade(security, interval, strategy, api_wrapper)
