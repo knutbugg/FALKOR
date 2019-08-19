@@ -29,17 +29,19 @@ class Gekko:
 	def _trade(security: str, interval: str, strategy, api_wrapper):
 		"""Helper method for self.trade_portfolio(). Runs strategy for security and sends signals to api_wrapper"""
 		
-		# Get 30 most recent candles of data
-		last_candles = self.book_worm.last_candles(30, api_wrapper, security, interval)
+		# Get 100 most recent candles of data
+		last_candles = self.book_worm.last_candles(100, api_wrapper, security, interval)
 
 		# Get trading signals from strategy
 		strategy.feed_data(last_candles)
-		signals = strategy.generate_signals()
-		strategy.update()
+		signal = strategy.predict()
+		# strategy.update(label)
 
-		# Send signals to BudFox for realization
-		self.bud_fox.receive_trading_signals(signals)
-		self.bud_fox.realize_signals()
+		# Send signal to BudFox for realization
+		self.bud_fox.send_trading_signal(signal)
+		trade_info = self.bud_fox.realize_signals()
+
+		return trade_info
 
 	def trade_portfolio():
 		"""Iterates through every security in self.portfolio, using their specified Strategy and APIWrapper"""
@@ -47,4 +49,6 @@ class Gekko:
 		for security, specs_list in self.portfolio:
 			interval, strategy, api_wrapper = specs_list[0], specs_list[1], specs_list[2]
 
-			self._trade(security, interval, strategy, api_wrapper)
+			trade_info = self._trade(security, interval, strategy, api_wrapper)
+
+			print(trade_info)
