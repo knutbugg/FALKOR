@@ -16,18 +16,20 @@ class Portfolio:
 			- a list of Trade objects, each containing an in-progress trade
 	"""
 
+	def __init__(self, paper_trade=False):
+		"""Initialize Portfolio instance"""
+		
+		self.paper_trade = paper_trade
 
+		self.securities_trading = {}
+		self.past_trades = []
+		self.current_trades = []
 
-	def __init__():
-		securities_trading = {}
-		past_trades = []
-		current_trades = []
-
-	def add_security(name: str, interval: str, strategy, api_wrapper):
+	def add_security(self, name: str, interval: str, strategy, api_wrapper):
 		self.securities_trading[name] = [interval, strategy, api_wrapper]
 
-	def add_past_trade():
+	def add_past_trade(self, ):
 		pass
 
-	def add_current_trade():
+	def add_current_trade(self, ):
 		pass

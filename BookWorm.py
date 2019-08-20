@@ -4,13 +4,18 @@ class BookWorm:
 	"""Pulls historical and live financial price data from APIWrappers. """
 
 	def historical_candles(self, api_wrapper, symbol: str, interval:str, start_time: str, end_time: str):
+		"""Returns a DataFrame of ochlv data for symbol from start_time to end_time with interval candlestick width"""
+
 		return api_wrapper.historical_candles(symbol, interval, start_time, end_time)
 
 	def last_candles(self, num, api_wrapper, symbol: str, interval: str):
+		"""Returns a DataFrame of num last ochl candlestick periods"""
+		
 		return api_wrapper.last_candles(num, symbol, interval)
 
-	def run_for_user():
+	def run_for_user(self):
 		"""Terminal access for user to download data from any api wrappers"""
+
 		api_wrappers = [BinanceWrapper]
 		
 		while True:
