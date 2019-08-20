@@ -5,25 +5,23 @@
 ![Alt text](arch.png?raw=true "Class Architecture")
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will help you get up and running a version of Falkor on your system. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Before running Falkor, make sure you have the following packages installed on your system.
+'''
+pip install python-binance
+pip install
+'''
 
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
-```
+git clone github.com/vdyagilev/Falkor
+git cd Falkor
+...
 
 And repeat
 
@@ -73,7 +71,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Vladimir Dyagilev** - ** - [project website](https://vladimirdyagilev.com)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
