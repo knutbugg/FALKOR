@@ -99,12 +99,15 @@ class CNN_Strategy(Strategy):
 
         # load created chart image as tensor
         img_tensor = self._load_img_as_tensor(self.image_path / "most_recent.png")
+        
+        # add batch_dimension to img_tensor
+        img_tensor = img_tensor.unsqueeze(0)
 
         # get buy/sell signal 
         self.model.eval() # set model to evaluation mode
-
-                print(img_tensor.shape)
-                output = self.model(img_tensor)
+        
+        
+        output = self.model(img_tensor)
         
         # if output[0] > 0, positive growth prediction
 

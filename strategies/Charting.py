@@ -286,7 +286,7 @@ class Charting:
 
         # Resize to 230, 175
         with Image.open(file_name) as img:
-            img = img.resize((230, 175), Image.ANTIALIAS)
+            img = img.resize((224, 224), Image.ANTIALIAS)
             img.save(file_name)
 
     def label_chart(self, csv_path):

@@ -12,6 +12,10 @@ class BookWorm:
         """Returns a DataFrame of num last ochl candlestick periods"""
         
         return api_wrapper.last_candles(num, symbol, interval)
+    
+    def tickers(self):
+        """Returns a dictionary of a symbol and ticker on the exchange"""
+        return api_wrapper.tickers()
 
     def run_for_user(self):
         """Terminal access for user to download data from any api wrappers"""

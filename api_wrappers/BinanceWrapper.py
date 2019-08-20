@@ -78,7 +78,11 @@ class BinanceWrapper(APIWrapper):
 												price=price)
 		return order
 
-	def sell_order(self, symbol: str, amount:int, price="market"):
+        def tickers(self):
+            """Return a dictionary of all symbols as key and their current price as value"""
+            return self.client.get_all_tickers()
+        
+        def sell_order(self, symbol: str, amount:int, price="market"):
 		"""
 		Created a sell order for amount. If price != "market", then a sell order
 		will be created at price=price
