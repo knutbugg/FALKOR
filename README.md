@@ -1,5 +1,5 @@
 # FALKOR | algo trading platform designed for PyTorch models
-> Minimalistic, Lightweight, and Powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-Time Portfolio management and custom Trading Strategies. To maximize safety, Falkor monitors stop-losses and provides real-time alerting. 
+> Minimalistic, Lightweight, and Powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-time portfolio management and custom trading strategies. To maximize safety, FALKOR monitors stop-losses and provides real-time alerting. 
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
