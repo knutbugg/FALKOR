@@ -12,16 +12,14 @@ These instructions will help you get up and running a version of Falkor on your 
 Before running Falkor, make sure you have the following packages installed on your system.
 '''
 pip install python-binance
-pip install
-'''
+pip install=
 
 
 ### Installing
 
-```
+
 git clone github.com/vdyagilev/Falkor
 git cd Falkor
-...
 
 And repeat
 
