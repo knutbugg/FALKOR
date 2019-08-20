@@ -6,8 +6,8 @@ class Portfolio:
     
     Attributes:
 
-        securities_trading: dict == {'ETHBTC': ['1d', Ex1Strategy, BinanceWrapper], 'TSLA': ['5m', Ex2Strategy, IBWrapper]}
-            - dictionary containing security str as key, and [interval, Strategy, APIWrapper] as the value
+        securities_trading: List
+            - list of owned Security objects
 
         past_trades: List(Trade)
             - a list of Trade objects, each containing information about a completed trade
@@ -21,12 +21,15 @@ class Portfolio:
         
         self.paper_trade = paper_trade
 
-        self.securities_trading = {}
+        self.securities_trading = []
         self.past_trades = []
         self.current_trades = []
 
-    def add_security(self, name: str, interval: str, strategy, api_wrapper):
-        self.securities_trading[name] = [interval, strategy, api_wrapper]
+    def add_security(self, sec):
+        self.securities_trading.append(sec)
+
+    def display(self):
+        print("Portfolio: \n {}".format([str(sec) for sec in self.securities_trading]))
 
     def add_past_trade(self, ):
         pass

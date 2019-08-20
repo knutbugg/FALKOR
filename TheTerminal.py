@@ -5,8 +5,10 @@ from BudFox import BudFox
 
 from strategies.CNN_Strategy import CNN_Strategy
 from api_wrappers.BinanceWrapper import BinanceWrapper
+from Security import Security
 
 from models.CNN.CNN import CNN
+
 
 class TheTerminal:
     """TheTerminal is used to interact with the running Falkor program. It allows the user to add new securities
@@ -18,11 +20,13 @@ class TheTerminal:
         self.portfolio = Portfolio(paper_trade=True)
         self.gekko = Gekko(self.portfolio)
 
-    # Add ETHBTC as a security 
+        # Add ETHBTC as a security 
         model = CNN()
         cnn_strat = CNN_Strategy(model=model, weights_path='models/cnn/weights/', image_path='strategies/images/')
         api_wrapper = BinanceWrapper(client_id='nBjgb83VMNvqq45b3JdWUIsJDalWlXxHI2bvDz9oLdW7KgOLPvJCp30CHnthjfNJ', client_secret='5bBN7s7h37kUvmGIpF9FTAtspBY93WirwhTh39PV7AlKSlUE2S4EEe9b3OZVYIqd')
-        self.add_security_to_portfolio('ETHBTC', '1m', cnn_strat, api_wrapper)
+        ethbtc = Security('ETHBTC', '1m', shares=0)
+
+        self.add_security_to_portfolio(ethbtc)
     
     def add_security_to_portfolio(self, name, interval, strategy, api_wrapper):
         """Adds a security to portfolio"""
@@ -35,8 +39,10 @@ class TheTerminal:
             # trade portfolio
             self.gekko.trade_portfolio()
 
+            # display portfolio information
+            self.portfolio.display()
+
             # sleep until next candlestick of data is avaliable
-            print("Done One Iteration")
             time.sleep(interval_secs)
 
 
