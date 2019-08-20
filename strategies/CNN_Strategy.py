@@ -110,8 +110,10 @@ class CNN_Strategy(Strategy):
         output = self.model(img_tensor)
         
         # if output[0] > 0, positive growth prediction
-
-        return output[0]
+        if output[0] >= 0.0:
+            return "buy"
+        else:
+            return "sell"
 
     def update(self):
         """Run whatever operations necessary to keep the strategy up-to-date with current data"""

@@ -21,7 +21,7 @@ class PaperTrader:
         self.securities_owned = {}
 
 
-    def buy_order(security: str, amount: int, price: float):
+    def buy_order(self, security: str, amount: int, price: float):
         """Adds an order of security with amount of shares at price value to self.securities_owned"""
 
         if security in self.securities_owned:
@@ -33,16 +33,18 @@ class PaperTrader:
         # subtract cost of investment from self.liquid
         self.liquid -= amount * price 
 
-    def sell_order(security: str, amount: int, price: float):
+    def sell_order(self, security: str, amount: int, price: float):
         """Sell all shares of security regardless of amount"""
+        try: 
+            shares = self.securities_owned[security]
 
-        shares = self.securities_owned[security]
+            for index, tup in enumerate(shares):
+                bought_amount, bought_price = tup
 
-        for index, tup in enumerate(shares):
-            bought_amount, bought_price = tup
+                # add profit to self.liquid
+                self.liquid += (bought_amount * bought_price) - (bought_amount * price) 
 
-            # add profit to self.liquid
-            self.liquid += (bought_amount * bought_price) - (bought_amount * price) 
-
-            # remove sold shares
-            shares.pop(index)
+                # remove sold shares
+                shares.pop(index)
+        except:
+            print('do not have any shares of {}'.format(security))

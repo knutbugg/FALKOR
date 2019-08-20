@@ -13,7 +13,7 @@ class BookWorm:
         
         return api_wrapper.last_candles(num, symbol, interval)
     
-    def tickers(self):
+    def tickers(self, api_wrapper):
         """Returns a dictionary of a symbol and ticker on the exchange"""
         return api_wrapper.tickers()
 
