@@ -21,9 +21,9 @@ class BudFox:
             api_wrapper = self.paper_trader
 
         if signal == "buy":
-            api_wrapper.buy_order(symbol, amount, price)
+            message = api_wrapper.buy_order(symbol, amount, price)
         
         elif signal == "sell":
-            api_wrapper.sell_order(symbol, amount, price)
+            message = api_wrapper.sell_order(symbol, amount, price)
 
-        return "bought {} shares of {} at {}".format(amount, symbol, price)
+        return "BudFox: {}".format(message)

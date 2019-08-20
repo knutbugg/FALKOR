@@ -31,7 +31,9 @@ class PaperTrader:
             self.securities_owned[security] = [ (amount, price) ]
 
         # subtract cost of investment from self.liquid
-        self.liquid -= amount * price 
+        self.liquid -= amount * price
+
+        return "Bought #{} of {} for {}.".format(amount, security, price)
 
     def sell_order(self, security: str, amount: int, price: float):
         """Sell all shares of security regardless of amount"""
@@ -46,5 +48,7 @@ class PaperTrader:
 
                 # remove sold shares
                 shares.pop(index)
+
+            return "Sold all shares of {} for {}. Your PaperTrader account now has {}$. ".format(security, price, self.liquid) 
         except:
-            print('do not have any shares of {}'.format(security))
+            return "NoSharesOwnedError: You Do Not Own Shares of this Security"

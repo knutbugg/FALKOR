@@ -28,19 +28,19 @@ class Gekko:
         self.bud_fox = BudFox()
         self.book_worm = BookWorm()
 
-    def _trade(self, security: str, interval: str, strategy, api_wrapper):
+    def _trade(self, security):
         """Helper method for self.trade_portfolio(). Runs strategy for security and sends signals to api_wrapper"""
         
         # Get 100 most recent candles of data
         # NOTE: Creating technical indicators cuts 100 candles down to ~ 50-80 depending on the indicator. We want 30 
-        # periods, so we take 100 to leave us with plenty of room to spare
+        # periods, so we take 100 to leave us with plenty of room to spare       
 
-        last_candles = self.book_worm.last_candles(100, api_wrapper, security, interval)
+        last_candles = self.book_worm.last_candles(100, security.api_wrapper, security.symbol, security.interval)
 
         # Get trading signals from strategy
-        strategy.feed_data(last_candles)
-        signal = strategy.predict()
-        strategy.update()
+        security.strategy.feed_data(last_candles)
+        signal = security.strategy.predict()
+        security.strategy.update()
         print("signal: {}".format(signal))
         # Send signal to BudFox for realization
 
@@ -48,17 +48,14 @@ class Gekko:
         if self.portfolio.paper_trade:
             self.bud_fox.paper_trade = True
 
-        market_price = self.book_worm.tickers(api_wrapper)[security]
-        trade_info = self.bud_fox.send_trading_signal(security, signal, amount=20, api_wrapper=api_wrapper, price=market_price)
+        market_price = self.book_worm.tickers(security.api_wrapper)[security.symbol]
+        trade_info = self.bud_fox.send_trading_signal(security.symbol, signal, amount=20, api_wrapper=security.api_wrapper, price=market_price)
 
         return trade_info
 
     def trade_portfolio(self):
         """Iterates through every security in self.portfolio, using their specified Strategy and APIWrapper"""
 
-        for security, specs_list in self.portfolio.securities_trading.items():
-            interval, strategy, api_wrapper = specs_list[0], specs_list[1], specs_list[2]
-
-            trade_info = self._trade(security, interval, strategy, api_wrapper)
-
+        for security in self.portfolio.securities_trading:
+            trade_info = self._trade(security)
             print(trade_info)
