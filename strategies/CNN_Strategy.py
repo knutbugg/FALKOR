@@ -1,6 +1,10 @@
 from strategies.Strategy import Strategy
+from strategies.TechnicalIndicators import sma, macd, obv, bollinger_bands, ema
+from strategies.Charting import Charting
 
 import torch
+import torchvision
+from PIL import Image
 from pathlib import Path
 
 class CNN_Strategy(Strategy):
@@ -72,7 +76,7 @@ class CNN_Strategy(Strategy):
 	def _load_img_as_tensor(self, img_path):
 		"""Returns tensor representation of image at img_path"""
 
-		img = pil_image.open(img_path)
+		img = Image.open(img_path)
 		img.load()
 		
 		img_tensor = torchvision.transforms.ToTensor()(img)
@@ -99,7 +103,8 @@ class CNN_Strategy(Strategy):
 		# get buy/sell signal 
 		self.model.eval() # set model to evaluation mode
 
-		output = self.model(img_tensor)
+                print(img_tensor.shape)
+                output = self.model(img_tensor)
 		
 		# if output[0] > 0, positive growth prediction
 

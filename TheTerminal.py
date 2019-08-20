@@ -20,7 +20,7 @@ class TheTerminal:
 
 	# Add ETHBTC as a security 
         model = CNN()
-        cnn_strat = CNN_Strategy(model=model, weights_path='models/cnn/weights/', image_path='models/cnn/images/')
+        cnn_strat = CNN_Strategy(model=model, weights_path='models/cnn/weights/', image_path='strategies/images/')
         api_wrapper = BinanceWrapper(client_id='nBjgb83VMNvqq45b3JdWUIsJDalWlXxHI2bvDz9oLdW7KgOLPvJCp30CHnthjfNJ', client_secret='5bBN7s7h37kUvmGIpF9FTAtspBY93WirwhTh39PV7AlKSlUE2S4EEe9b3OZVYIqd')
         self.add_security_to_portfolio('ETHBTC', '1m', cnn_strat, api_wrapper)
     
