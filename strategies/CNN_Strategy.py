@@ -1,10 +1,12 @@
 from strategies.Strategy import Strategy
+
 import torch
+from pathlib import Path
 
 class CNN_Strategy(Strategy):
 	"""Abstract class representing a Strategy used by Gekko. The child class must create all NotImplemented methods"""
 
-	def __init__(model, weights_path, image_path):
+	def __init__(self, model, weights_path, image_path):
 		"""Initialize CNN_Strategy instance"""
 		self.model = model
 
@@ -13,7 +15,7 @@ class CNN_Strategy(Strategy):
 		# Load saved model weights from path
 		self._load_weights(self.model, weights_path)
 
-	def _load_weights(model, path):
+	def _load_weights(self, model, path):
 		"""Load weights into model from path"""
 		
 		try:
@@ -21,19 +23,19 @@ class CNN_Strategy(Strategy):
 		except:
 			print('Saved model weights not found')
 
-	def _save_model(model, path):
+	def _save_model(self, model, path):
 		"""Save a trained PyTorch model to path"""
 		
 		torch.save(model.state_dict(), path)	
 
-	def _generate_chart_img(df):
+	def _generate_chart_img(self, df):
 		"""Take a df of ochl and save it as a fusion chart image at save_path"""
 		chart_ti = ['sma20', 'macd', 'obv', 'bb20_low', 'bb20_mid', 'bb20_up']
 		chart = Charting(df, col_label='time', row_label='close', tech_inds=chart_ti)
 		chart.chart_to_image(self.image_path / 'most_recent.png')
 
 
-	def _preprocess_df(df):
+	def _preprocess_df(self, df):
 		"""Take an input df of ochlv data and return a df ready for creating a chart image with"""
 
 		# Create Technical Indicators for df
@@ -67,7 +69,7 @@ class CNN_Strategy(Strategy):
 
 		return df
 
-	def _load_img_as_tensor(img_path):
+	def _load_img_as_tensor(self, img_path):
 		"""Returns tensor representation of image at img_path"""
 
 		img = pil_image.open(img_path)
@@ -79,7 +81,7 @@ class CNN_Strategy(Strategy):
 		img_tensor = img_tensor[:3,:,:]
 		return img_tensor
 
-	def feed_data(recent_candles):
+	def feed_data(self, recent_candles):
 		"""Feed in a DataFrame of the last recent candles."""
 
 		# add technical indicators to live_df
@@ -88,7 +90,7 @@ class CNN_Strategy(Strategy):
 		# generate image from input_df
 		self._generate_chart_img(input_df)
 
-	def predict():
+	def predict(self):
 		"""Returns prediction of price growth for the next t+5 candles"""
 
 		# load created chart image as tensor
@@ -103,6 +105,6 @@ class CNN_Strategy(Strategy):
 
 		return output[0]
 
-	def update():
+	def update(self):
 		"""Run whatever operations necessary to keep the strategy up-to-date with current data"""
 		pass
