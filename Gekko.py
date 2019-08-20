@@ -41,14 +41,15 @@ class Gekko:
 		strategy.feed_data(last_candles)
 		signal = strategy.predict()
 		strategy.update()
-
+		print("signal: {}".format(signal))
 		# Send signal to BudFox for realization
 
 		# tell BudFox to paper trade instead of real trade
 		if self.portfolio.paper_trade:
 			self.bud_fox.paper_trade = True
 
-		trade_info = self.bud_fox.send_trading_signal(signal)
+		market_price = self.book_worm.tickers[security]
+		trade_info = self.bud_fox.send_trading_signal(security, signal, amount=20, api_wrapper=api_wrapper, price=market_price)
 
 		return trade_info
 

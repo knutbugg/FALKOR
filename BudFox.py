@@ -15,7 +15,7 @@ class BudFox:
 		self.paper_trader = PaperTrader()
 
 	def send_trading_signal(self, symbol: str, signal: str, amount: int, api_wrapper, price="market"):
-		
+		"""Sends buy and sell signals to specified api_wrapper. Returns string of trade receipt"""
 		# replace api_wrapper with PaperTrader instance if specified
 		if self.paper_trade:
 			api_wrapper = self.paper_trader
@@ -25,3 +25,5 @@ class BudFox:
 		
 		elif signal == "sell":
 			api_wrapper.sell_order(symbol, amount, price)
+
+		return "bought {} shares of {} at {}".format(amount, symbol, price)

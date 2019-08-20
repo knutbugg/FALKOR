@@ -1,4 +1,4 @@
-from Strategy import Strategy
+from strategies.Strategy import Strategy
 import torch
 
 class CNN_Strategy(Strategy):
@@ -69,6 +69,7 @@ class CNN_Strategy(Strategy):
 
 	def _load_img_as_tensor(img_path):
 		"""Returns tensor representation of image at img_path"""
+
 		img = pil_image.open(img_path)
 		img.load()
 		
@@ -98,26 +99,10 @@ class CNN_Strategy(Strategy):
 
 		output = self.model(img_tensor)
 		
+		# if output[0] > 0, positive growth prediction
+
 		return output[0]
 
-	def update(label):
+	def update():
 		"""Run whatever operations necessary to keep the strategy up-to-date with current data"""
-
-		# load created chart image as tensor
-		img_tensor = self._load_img_as_tensor(self.image_path / "most_recent.png")
-		
-		self.model.train() # set model to training mode
-
-		# Clear gradients
-		model.zero_grad()
-
-		output = self.model(img_tensor)
-
-		# train model with new data
-		optimizer = optim.Adam(self.model.parameters(), lr=1e-4)
-		criterion = nn.MSELoss()
-		loss = torch.sqrt(criterion(output, label))
-
-		# backprop loss and update model
-		loss.backward()
-		optimizer.step()
+		pass
