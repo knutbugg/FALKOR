@@ -6,14 +6,14 @@
 ## Installation
 
 ```sh
-git clone https://github.com/vdyagilev/Falkor.git
-cd Falkor
+git clone https://github.com/vdyagilev/FALKORr.git
+cd FALKOR
 python TheTerminal.py
 ```
 
 ## Architecture
 
-To fully understand Falkor and use it to build your own profitable strategy - you need to understand how its classes interact.
+To fully understand FALKOR and use it to build your own profitable strategy - you need to understand how its classes interact.
 
 ![](arch.png)
 
@@ -47,7 +47,7 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/vdyagilev/Falkor/fork>)
+1. Fork it (<https://github.com/vdyagilev/FALKOR/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
