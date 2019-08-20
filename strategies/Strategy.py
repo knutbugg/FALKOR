@@ -1,18 +1,18 @@
 
 class Strategy:
-	"""Abstract class representing a Strategy used by Gekko. The child class must create all NotImplemented methods"""
+    """Abstract class representing a Strategy used by Gekko. The child class must create all NotImplemented methods"""
 
-	def feed_data(live_df):
-		"""Feed in a DataFrame of the last 30 ochl periods."""
+    def feed_data(live_df):
+        """Feed in a DataFrame of the last 30 ochl periods."""
 
-		raise NotImplementedError
+        raise NotImplementedError
 
-	def generate_signals():
-		"""Returns a list of trading signals"""
+    def generate_signals():
+        """Returns a list of trading signals"""
 
-		raise NotImplementedError
+        raise NotImplementedError
 
-	def update():
-		"""Run whatever operations necessary to keep the strategy up-to-date with current data"""
+    def update():
+        """Run whatever operations necessary to keep the strategy up-to-date with current data"""
 
-		raise NotImplementedError
+        raise NotImplementedError
