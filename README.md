@@ -1,4 +1,4 @@
-# Falkor | Automated Algorithmic Trading Platform
+# Falkor | Automated Algorithmic Trading Platform designed for PyTorch models
 
 ![Alt text](falkor.jpg?raw=true "Falkor from The Neverending Story")
 
