@@ -1,12 +1,12 @@
 # FALKOR | algorithmic trading platform designed for PyTorch models
-> Minimalistic, Lightweight, and Powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-time portfolio management and custom trading strategies. To maximize safety, FALKOR monitors stop-losses and provides real-time alerting. 
+> Minimalistic, lightweight, and powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-time portfolio management and custom trading strategies. To maximize safety, FALKOR monitors stop-losses and provides real-time alerting. 
 
 ![](falkor.jpg)
 
 ## Installation
 
 ```sh
-git clone https://github.com/vdyagilev/FALKORr.git
+git clone https://github.com/vdyagilev/FALKOR.git
 cd FALKOR
 python TheTerminal.py
 ```
@@ -36,12 +36,14 @@ npm test
 
 ## Release History
 
-1.0 Not Yet Released!!!
+1.0 - ... - Vladimir Dyagilev
+
+2.0 - ... - Eric Hasegawa, Vladimir Dyagilev
 
 ## Meta
 
-Vladimir Dyagilev – [https://vladimirdyagilev.com/](https://vladimirdyagilev.com) 
-[https://github.com/vvdyagilev/](https://github.com/vdyagilev/)
+Vladimir Dyagilev – [My Projects](https://vladimirdyagilev.com) 
+[My GitHub](https://github.com/vdyagilev/)
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
