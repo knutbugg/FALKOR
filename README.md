@@ -1,4 +1,4 @@
-# FALKOR | algorithmic trading platform designed for PyTorch models
+# FALKOR | Automated trading platform designed for PyTorch models
 > Minimalistic, lightweight, and powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-time portfolio management and custom trading strategies. To maximize safety, FALKOR monitors stop-losses and provides real-time alerting. 
 
 
