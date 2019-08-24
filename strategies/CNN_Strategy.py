@@ -56,6 +56,9 @@ class CNN_Strategy(Strategy):
         # add technical indicators to live_df
         input_df = add_ti(recent_candles)
 
+        # trim input_df to only contain 30 last candles
+        input_df = input_df[len(input_df)-30:]
+
         # generate image from input_df
         self._generate_chart_img(input_df)
 

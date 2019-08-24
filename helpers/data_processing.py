@@ -54,13 +54,18 @@ def add_ti(df):
 	ti_dict = {'sma20': sma20_list, 'macd': macd_list, 'obv': obv_list,
 			 'bb20_low': bb20_low, 'bb20_mid': bb20_mid, 'bb20_up': bb20_up}
 
-	# Cut all data to last 30 periods
+	# Cut all data to have equal length
 
-	df = df.iloc[df.shape[0]-30:, :]
+	smallest_len = min( [len(x) for l, x in ti_dict.items()] )
+
+	df = df[start_i:]
 
 	for label, data in ti_dict.items():
-		last_data = data[len(data)-30:]
-		ti_dict[label] = last_data
+
+		# convert smallest_len to a start_index for this data list
+		start_i = (len(data) - smallest_len)
+
+		ti_dict[label] = data[start_i:]
 
 		# add to df
 		df[label] = last_data
