@@ -15,7 +15,7 @@ python TheTerminal.py
 
 To fully understand FALKOR and use it to build your own profitable strategy - you need to understand how its classes interact.
 
-![](arch.png)
+![](ArchitectureBlueprint-UMLDiagram.jpg)
 
 ## Usage example
 
