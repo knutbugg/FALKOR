@@ -28,28 +28,29 @@ class Gekko:
         self.bud_fox = BudFox()
         self.book_worm = BookWorm()
 
-    def _trade(self, security):
+    def _trade(self, s):
         """Helper method for self.trade_portfolio(). Runs strategy for security and sends signals to api_wrapper"""
         
         # Get 100 most recent candles of data
         # NOTE: Creating technical indicators cuts 100 candles down to ~ 50-80 depending on the indicator. We want 30 
         # periods, so we take 100 to leave us with plenty of room to spare       
 
-        last_candles = self.book_worm.last_candles(100, security.api_wrapper, security.symbol, security.interval)
+        last_candles = self.book_worm.last_candles(100, s.api_wrapper, s.symbol, s.interval)
 
         # Get trading signals from strategy
-        security.strategy.feed_data(last_candles)
-        signal = security.strategy.predict()
-        security.strategy.update()
+        s.strategy.feed_data(last_candles)
+        signal = s.strategy.predict()
+        s.strategy.update()
         print("signal: {}".format(signal))
+
+
         # Send signal to BudFox for realization
 
         # tell BudFox to paper trade instead of real trade
         if self.portfolio.paper_trade:
             self.bud_fox.paper_trade = True
 
-        market_price = self.book_worm.tickers(security.api_wrapper)[security.symbol]
-        trade_info = self.bud_fox.send_trading_signal(security.symbol, signal, amount=20, api_wrapper=security.api_wrapper, price=market_price)
+        trade_info = self.bud_fox.send_trading_signal(s.symbol, signal, amount=20, api_wrapper=s.api_wrapper, price="market")
 
         return trade_info
 

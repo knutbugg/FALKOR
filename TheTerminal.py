@@ -31,6 +31,7 @@ class TheTerminal:
     def run(self, interval_secs: int):
         """Begin pulling recent candles, generating trading signals, and trading."""
         while True:
+            
             # trade portfolio
             self.gekko.trade_portfolio()
 
@@ -40,6 +41,8 @@ class TheTerminal:
             # sleep until next candlestick of data is avaliable
             time.sleep(interval_secs)
 
+    def backtest(self, dataset_df):
+        self.gekko.backtest()
 
 if __name__ == '__main__':
     terminal = TheTerminal()

@@ -20,6 +20,11 @@ class BudFox:
         if self.paper_trade:
             api_wrapper = self.paper_trader
 
+        # If market order, sell for market price
+        if price == "market":
+            price = api_wrapper.tickers()[symbol]
+
+
         if signal == "buy":
             message = api_wrapper.buy_order(symbol, amount, price)
         
