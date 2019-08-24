@@ -20,7 +20,7 @@ def split_dataset(dataset_df, a=0, b=30, step_size=5):
 	# dataset_splits = dataset_splits[:len(dataset_splits)-5] # remove last 5 element since we predict price t+5
 	return dataset_splits
 
-def price_labels(dataset_windows: list, period_size: int, periods_into_the_future=5: int):
+def price_labels(dataset_windows: list, period_size: int, periods_into_the_future=5):
 	"""returns a list with len = len(dataset_windows) - 1 containing the price return of time + 5 and now"""
 	dct = {'curr_price': [], 'future_price': [], 'return': []}
 	for i, df in enumerate(dataset_windows[:-1]): # skip the last one
@@ -33,7 +33,7 @@ def price_labels(dataset_windows: list, period_size: int, periods_into_the_futur
 		
 	return dct
 
-def add_ti(candles_df):
+def add_ti(df):
 	"""Take an input df of ochlv data and return a df ready for creating a chart image with"""
 
 	# Create Technical Indicators for df
