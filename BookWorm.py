@@ -1,7 +1,10 @@
 from api_wrappers.BinanceWrapper import BinanceWrapper
 
 class BookWorm:
-    """Pulls historical and live financial price data from APIWrappers. """
+    """
+    Pulls historical and live financial price data from APIWrappers. 
+    
+    """
 
     def historical_candles(self, api_wrapper, symbol: str, interval:str, start_time: str, end_time: str):
         """Returns a DataFrame of ochlv data for symbol from start_time to end_time with interval candlestick width"""

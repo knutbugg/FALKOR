@@ -1,62 +1,133 @@
 from BudFox import BudFox
 from BookWorm import BookWorm
+from Portfolio import Portfolio
+
+from strategies.Strategy import Strategy
 
 class Gekko:
     """
-    The engine room of Falkor. Every iteration, Gekko receives an input of live ochl data. It sends this 
-    data to the selected Strategy, which generates buy/sell signals and real-time model updating. 
-    Gekko takes these signals and sends them to BudFox who  will realize them. 
+    The engine room of Falkor. Every iteration, Gekko receives an input 
+    of live ochl data. It sends this data to the selected Strategy, which 
+    generates buy/sell signals and real-time model updating. Gekko takes 
+    these signals and sends them to BudFox who will realize them. 
     Gekko then updates portfolio with any profits made
     
     Attributes:
         
         bud_fox: BudFox
-            - An instance of BudFox class used to send buy/sell signals to an APIWrapper for realization
+            - An instance of BudFox class used to send buy/sell signals to 
+            an APIWrapper for realization
 
         portfolio: Portfolio
-            - An instance of Portfolio class that stores all trades and securities  
+            - An instance of Portfolio class that stores all trades and 
+            securities  
 
         book_worm: BookWorm
-            - An instance of BookWorm class used for pulling live data from APIWrappers
+            - An instance of BookWorm class used for pulling live data 
+            from APIWrappers
+
+    Methods:
+
+        _trade(self, s)
+            - helper method used to trade one Security, s.
+
+        trade_portfolio(self)
+            - calls _trade on every Security inside portfolio
 
     """
 
-    def __init__(self, portfolio):
+    def __init__(self, portfolio: Portfolio):
         """Initialize Gekko"""
-        
         self.portfolio = portfolio
+
         self.bud_fox = BudFox()
         self.book_worm = BookWorm()
 
-    def _trade(self, s):
-        """Helper method for self.trade_portfolio(). Runs strategy for security and sends signals to api_wrapper"""
+    def _trade(self, sec):
+        """
+        Helper method for self.trade_portfolio(). Runs strategy for security 
+        and sends signals to api_wrapper
+        """
+
+        # If this security is waiting for a further time period to be traded,
+        # don't trade it but update waiting periods
+        if sec.status == "waiting":
+            # subtract one from _waiting_periods_left
+            sec.update_waiting_status(amount=-1)
+            return "Gekko: This security has {} waiting periods left".format(
+                sec._waiting_periods_left)
         
-        # Get 100 most recent candles of data
-        # NOTE: Creating technical indicators cuts 100 candles down to ~ 50-80 depending on the indicator. We want 30 
-        # periods, so we take 100 to leave us with plenty of room to spare       
+        # trade this security if its ready
+        elif sec.status == "ready":
+            
+            # Get 100 most recent candles of data
+            # NOTE: Creating technical indicators cuts 100 candles down to ~ 50-80 depending on the indicator. We want 30 
+            # periods, so we take 100 to leave us with plenty of room to spare       
+            last_candles = self.book_worm.last_candles(100, sec.api_wrapper, sec.symbol, sec.interval)
 
-        last_candles = self.book_worm.last_candles(100, s.api_wrapper, s.symbol, s.interval)
+            # Get trading signals from strategy
 
-        # Get trading signals from strategy
-        s.strategy.feed_data(last_candles)
-        signal = s.strategy.predict()
-        s.strategy.update()
-        print("signal: {}".format(signal))
+            # Feed last_candles to strategy
+            sec.strategy.feed_data(last_candles)
+            # Make a prediction based on last_candles
+            signal = sec.strategy.predict()
+            # Update model however specified
+            sec.strategy.update()
 
 
-        # Send signal to BudFox for realization
+            # If strategy predicts price growth in 5 periods, we set 
+            # s.status == waiting until 5 periods from now
 
-        # tell BudFox to paper trade instead of real trade
-        if self.portfolio.paper_trade:
+            if signal == "buy":
+                sec.set_status(status="waiting", periods=5)
+
+            # Send signal to BudFox for realization
+
+            # tell BudFox to paper trade instead of real trade
             self.bud_fox.paper_trade = True
 
-        trade_info = self.bud_fox.send_trading_signal(s.symbol, signal, amount=20, api_wrapper=s.api_wrapper, price="market")
+            # send trading signal to BudFox
+            trade_info = self.bud_fox.send_trading_signal(s.symbol, signal, amount=20, api_wrapper=s.api_wrapper, price="market")
 
-        return trade_info
+            # return information pertaining to this trade
+            return trade_info
+
+        else:
+            raise SyntaxError("sec.status is set to something other than ready or waiting")
 
     def trade_portfolio(self):
         """Iterates through every security in self.portfolio, using their specified Strategy and APIWrapper"""
-
         for security in self.portfolio.securities_trading:
             trade_info = self._trade(security)
             print(trade_info)
+
+    def backtest(self, feature_list, price_returns, strategy: Strategy):
+        """
+        Iterates through feature_list, generating trading signals and calculating profitability of signals
+        generated by strategy
+        """
+        crct_pred, incrct_pred = 0, 0
+
+        for i in range(len(feature_list)):
+            feature, price_return = feature_list[i], price_returns[i]
+
+            strategy.feed_data(feature)
+            signal = strategy.predict()
+
+            if signal == 'buy' and price_return > 0:
+                crct_pred += 1
+
+            elif signal == 'buy' and price_return < 0:
+                incrct_pred += 1
+
+            elif signal == 'sell' and price_return < 0:
+                crct_pred += 1
+
+            elif signal == 'sell' and price_return > :
+                incrct_pred += 1
+
+        print("Correct on {}. Incorrect on {}. %{}".format(crct_pred, incrct_pred, 
+                                                            ((crct_pred+incrct_pred) / crct_pred) * 100)
+
+
+
