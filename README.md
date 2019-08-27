@@ -1,38 +1,33 @@
 # FALKOR | Automated trading platform designed for PyTorch models
 > Minimalistic, lightweight, and powerful stock and cryptocurrency trading platform designed fully in Python. Build custom PyTorch models for stock price prediction. Real-time portfolio management and custom trading strategies. To maximize safety, FALKOR monitors stop-losses and provides real-time alerting. 
 
-
 ![](arch.jpg)
 
-## Installation
+### Features
+1. PyTorch models for price prediction
+2. Backtesting for profitability
+3. Easy to extend to a new security with custom APIWrappers
+4. Live automated trading with stop loss support
 
-```sh
-git clone https://github.com/vdyagilev/FALKOR.git
-cd FALKOR
-python TheTerminal.py
-```
+#### Extras: 
+  * tool for hand-labelling buy/sell points on historical candlestick chart
+  * generate technical indicators for OCHLV candlestick data
+  * alerting
 
-## Architecture
+### Prerequisites
+* GPU CUDA enabled device
+* Knowledge of PyTorch models
 
-To fully understand FALKOR and use it to build your own profitable strategy - you need to understand how its classes interact.
+### Installation 
 
+### Running Live Trade
 
-## Usage example
+### Running a Back Test
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+### Creating your own trading Strategy
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+### Tips and tricks
 
-
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Release History
 
@@ -40,17 +35,17 @@ npm test
 
 2.0 - ... - Eric Hasegawa, Vladimir Dyagilev
 
-## Meta
+### Founder
 
 Vladimir Dyagilev – [My Projects](https://vladimirdyagilev.com) 
 [My GitHub](https://github.com/vdyagilev/)
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-## Contributing
+### Contributing
 
 1. Fork it (<https://github.com/vdyagilev/FALKOR/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+**NOTE: We are not responsible for any assets gained or lost through the use of FALKOR. Use at your own risk, and please, ensure you have backtested your Strategy and implemented stop losses**
