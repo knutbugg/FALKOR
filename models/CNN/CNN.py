@@ -10,7 +10,7 @@ class CNN(nn.Module):
         super(CNN, self).__init__()
         
         # initial layer is resnet
-        self.resnet = models.resnet34(pretrained=True, progress=False)
+        self.resnet = models.resnet18(pretrained=True, progress=False)
         
         # final fully connected layers
         self.dense1 = nn.Linear(1000, 500)

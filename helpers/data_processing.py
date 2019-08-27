@@ -21,15 +21,15 @@ def split_dataset(dataset_df, a=0, b=30, step_size=5):
 	return dataset_splits
 
 def price_labels(dataset_windows: list, period_size: int, periods_into_the_future=5):
-	"""returns a list with len = len(dataset_windows) - 1 containing the price return of time + 5 and now"""
+	"""Returns a dict containing curr_price, future_price, and price_return for every entry inside dataset_window"""
 	dct = {'curr_price': [], 'future_price': [], 'return': []}
 	for i, df in enumerate(dataset_windows[:-1]): # skip the last one
 		curr_price = df['close'][period_size-1]
 		dct['curr_price'].append(curr_price)
 		
-		future_price = dataset_windows[i+1]['close'][periods_into_the_future-1] # 4 periods into the future
+		future_price = dataset_windows[i+1]['close'][periods_into_the_future-1] # 5 periods into the future
 		dct['future_price'].append(future_price) 
-		dct['return'].append(( ( future_price - curr_price ) / curr_price) + 1) # add one s.t. log(return) > 0 if positive growt
+		dct['return'].append(( ( future_price - curr_price ) / curr_price)) 
 		
 	return dct
 
@@ -57,8 +57,8 @@ def add_ti(df):
 	# Cut all data to have equal length
 
 	smallest_len = min( [len(x) for l, x in ti_dict.items()] )
-
-	df = df[start_i:]
+        
+	df = df[len(df) - smallest_len:]
 
 	for label, data in ti_dict.items():
 
@@ -68,6 +68,6 @@ def add_ti(df):
 		ti_dict[label] = data[start_i:]
 
 		# add to df
-		df[label] = last_data
+		df[label] = ti_dict[label]
 
 	return df

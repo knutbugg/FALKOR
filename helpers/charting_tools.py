@@ -288,6 +288,12 @@ class Charting:
         with Image.open(file_name) as img:
             img = img.resize((224, 224), Image.ANTIALIAS)
             img.save(file_name)
+            
+            # close image
+            img.close()
+        
+        # close all open plots to save memory
+        plt.close('all')
 
     def label_chart(self, csv_path):
         """Show and Label the Chart. Call this method. """

@@ -4,7 +4,7 @@ import numpy as np
 import torchvision
 
 from PIL import Image
-
+from torch.utils.data import *
 
 class ArrayTimeSeriesDataset(Dataset):
     """Dataset for historical timeseries data. 

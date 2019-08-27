@@ -1,3 +1,8 @@
+import torch
+import torch.nn as nn
+from torch.nn.functional import relu
+import torchvision.models as models
+
 
 class GRUnet(nn.Module):
 	def __init__(self, num_features, batch_size, hidden_size):
