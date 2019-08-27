@@ -123,11 +123,11 @@ class Gekko:
             elif signal == 'sell' and price_return < 0:
                 crct_pred += 1
 
-            elif signal == 'sell' and price_return > :
+            elif signal == 'sell' and price_return > 0:
                 incrct_pred += 1
 
         print("Correct on {}. Incorrect on {}. %{}".format(crct_pred, incrct_pred, 
-                                                            ((crct_pred+incrct_pred) / crct_pred) * 100)
+                                                            ((crct_pred+incrct_pred) / crct_pred) * 100))
 
 
 

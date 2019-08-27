@@ -1,11 +1,15 @@
 from strategies.Strategy import Strategy
-from ../helpers.data_processing import add_ti
-from ../helpers.charting_tools import Charting
+from helpers.data_processing import add_ti
+from helpers.charting_tools import Charting
 
 import torch
 import torchvision
 from PIL import Image
 from pathlib import Path
+
+# make parent folders accesible
+import sys 
+sys.path.append('..')
 
 class CNN_Strategy(Strategy):
     """Abstract class representing a Strategy used by Gekko. The child class must create all NotImplemented methods"""
