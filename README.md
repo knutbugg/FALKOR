@@ -3,30 +3,30 @@
 
 ![](arch.jpg)
 
-## Features
+### Features
 1. PyTorch models for price prediction
 2. Backtesting for profitability
 3. Easy to extend to a new security with custom APIWrappers
 4. Live automated trading with stop loss support
 
-Extras: 
+#### Extras: 
   * tool for hand-labelling buy/sell points on historical candlestick chart
   * generate technical indicators for OCHLV candlestick data
   * alerting
 
-## Prerequisites
+### Prerequisites
 * GPU CUDA enabled device
 * Knowledge of PyTorch models
 
-## Installation 
+### Installation 
 
-## Running Live Trade
+### Running Live Trade
 
-## Running a Back Test
+### Running a Back Test
 
-## Creating your own trading Strategy
+### Creating your own trading Strategy
 
-## Tips and tricks
+### Tips and tricks
 
 
 ## Release History
@@ -35,12 +35,12 @@ Extras:
 
 2.0 - ... - Eric Hasegawa, Vladimir Dyagilev
 
-## Founder
+### Founder
 
 Vladimir Dyagilev – [My Projects](https://vladimirdyagilev.com) 
 [My GitHub](https://github.com/vdyagilev/)
 
-## Contributing
+### Contributing
 
 1. Fork it (<https://github.com/vdyagilev/FALKOR/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
