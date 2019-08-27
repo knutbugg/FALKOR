@@ -48,4 +48,4 @@ Vladimir Dyagilev – [My Projects](https://vladimirdyagilev.com)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-** NOTE: We are not responsible for any assets gained or lost through the use of FALKOR. Use at your own risk, and please, ensure you have backtested your Strategy and implemented stop losses **
+**NOTE: We are not responsible for any assets gained or lost through the use of FALKOR. Use at your own risk, and please, ensure you have backtested your Strategy and implemented stop losses**
