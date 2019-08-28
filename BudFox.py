@@ -34,19 +34,20 @@ class BudFox:
         string of trade receipt
         """
         
+        # If market order, sell for market price
+        if price == "market":
+            price = api_wrapper.tickers()[symbol]
+        
         # replace api_wrapper with PaperTrader instance if specified
         if self.paper_trade:
             api_wrapper = self.paper_trader
 
-        # If market order, sell for market price
-        if price == "market":
-            price = api_wrapper.tickers()[symbol]
 
 
         if signal == "buy":
-            message = api_wrapper.buy_order(symbol, amount, price)
-        
-        elif signal == "sell":
-            message = api_wrapper.sell_order(symbol, amount, price)
+            trade_info = api_wrapper.buy_order(symbol, amount, price)
 
-        return "BudFox: {}".format(message)
+        elif signal == "sell":
+            trade_info = api_wrapper.sell_order(symbol, amount, price)
+
+        return trade_info

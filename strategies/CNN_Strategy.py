@@ -18,7 +18,9 @@ class CNN_Strategy(Strategy):
         """Initialize CNN_Strategy instance"""
         self.model = model
 
-        self.image_path = Path(image_path)
+        self.image_path = image_path
+
+        
 
         # Load saved model weights from path
         self._load_weights(self.model, weights_path)
@@ -26,10 +28,10 @@ class CNN_Strategy(Strategy):
     def _load_weights(self, model, path):
         """Load weights into model from path"""
         
-        try:
-            model.load_state_dict(torch.load(path))
-        except:
-            print('Saved model weights not found')
+        #try:
+        model.load_state_dict(torch.load(path))
+        #except:
+            
 
     def _save_model(self, model, path):
         """Save a trained PyTorch model to path"""

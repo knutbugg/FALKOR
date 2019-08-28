@@ -87,7 +87,7 @@ class Gekko:
             self.bud_fox.paper_trade = True
 
             # send trading signal to BudFox
-            trade_info = self.bud_fox.send_trading_signal(s.symbol, signal, amount=20, api_wrapper=s.api_wrapper, price="market")
+            trade_info = self.bud_fox.send_trading_signal(sec.symbol, signal, amount=20, api_wrapper=sec.api_wrapper, price="market")
 
             # return information pertaining to this trade
             return trade_info
