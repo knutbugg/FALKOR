@@ -76,7 +76,7 @@ class Strategy:
 
 ## Release History
 
-1.0 - ... - Vladimir Dyagilev
+1.0 - DEVELOPMENT STILL IN PROGRESS - Vladimir Dyagilev
 
 2.0 - ... - Eric Hasegawa, Vladimir Dyagilev
 
