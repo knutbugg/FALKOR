@@ -26,32 +26,32 @@
 * + python packages for api wrappers
 
 ### Installation 
-'''
+```
 git clone git@github.com:vdyagilev/FALKOR.git
 cd FALKOR
-'''
+```
 
 ### Running Live Trade
 
 Edit the settiings within LiveTrade and run the following command:
 
-'''
+```
 python LiveTrade.py
-'''
+```
 
 ### Running a Back Test
 
 Edit the settings within BackTest and run the following command:
 
-'''
+```
 python BackTest.py
-'''
+```
 
 ### Creating your own trading Strategy
 
 Extend the Abstract Strategy class and implement the following methods:
 
-''' python
+``` python
 class Strategy:
     """Abstract class representing a Strategy used by Gekko. The child class must create all NotImplemented methods"""
 
@@ -69,7 +69,7 @@ class Strategy:
         """Run whatever operations necessary to keep the strategy up-to-date with current data"""
 
         raise NotImplementedError
-'''
+```
 
 ### Tips and tricks
 
