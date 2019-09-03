@@ -269,15 +269,16 @@ class Charting:
         # Create axis for special technical indicators, obv, macd, etc.
         ax3 = self.fig.add_subplot(414)
         plt.axis('off')
+        
+        if 'macd' in self.df:
+            # Normalize macd
+            macd_list = self.df['macd'].tolist()
+            norm_macd_list = normalize_by_dataset(macd_list, self.y, from_origin=True)
 
-        # Normalize macd
-        macd_list = self.df['macd'].tolist()
-        norm_macd_list = normalize_by_dataset(macd_list, self.y, from_origin=True)
-
-        # Plot the macd graph
-        vol_df = pd.DataFrame(list(zip(time_list, norm_macd_list)),
-                              columns=['time', 'macd'])
-        vol_df.plot(x='time', y='macd', ax=ax3, label='_nolegend_')
+            # Plot the macd graph
+            vol_df = pd.DataFrame(list(zip(time_list, norm_macd_list)),
+                                  columns=['time', 'macd'])
+            vol_df.plot(x='time', y='macd', ax=ax3, label='_nolegend_')
 
         # Save to an image
 

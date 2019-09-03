@@ -6,7 +6,7 @@ import torchvision
 from PIL import Image
 from torch.utils.data import *
 
-class ArrayTimeSeriesDataset(Dataset):
+class DFTimeSeriesDataset(Dataset):
     """Dataset for historical timeseries data. 
     self.feature_dfs = [np.Array, np.Array, np.Array, ..., np.Array]
     self.labels = [np.Array, np.Array, np.Array, ..., np.Array]
@@ -21,7 +21,8 @@ class ArrayTimeSeriesDataset(Dataset):
     def __getitem__(self, i):
         time_series_arr =  np.array(self.time_series[i])
         label = np.array(self.labels[i])
-        return time_series_arr.flatten(), label.flatten() # convert array into vector
+        
+        return time_series_arr, label
 
 class ChartImageDataset(Dataset):
     """Stock chart image Dataset"""
