@@ -82,4 +82,4 @@ class Security:
         if self._waiting_periods_left - amount <= 0:
             self.set_status(status="ready", periods=0)
         else:
-            self._waiting_periods_left -= amount
+            self._waiting_periods_left += amount

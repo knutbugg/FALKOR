@@ -87,7 +87,7 @@ class Gekko:
             self.bud_fox.paper_trade = True
 
             # send trading signal to BudFox
-            trade_info = self.bud_fox.send_trading_signal(s.symbol, signal, amount=20, api_wrapper=s.api_wrapper, price="market")
+            trade_info = self.bud_fox.send_trading_signal(sec.symbol, signal, amount=20, api_wrapper=sec.api_wrapper, price="market")
 
             # return information pertaining to this trade
             return trade_info
@@ -123,11 +123,11 @@ class Gekko:
             elif signal == 'sell' and price_return < 0:
                 crct_pred += 1
 
-            elif signal == 'sell' and price_return > :
+            elif signal == 'sell' and price_return > 0:
                 incrct_pred += 1
 
         print("Correct on {}. Incorrect on {}. %{}".format(crct_pred, incrct_pred, 
-                                                            ((crct_pred+incrct_pred) / crct_pred) * 100)
+                                                            ((crct_pred+incrct_pred) / crct_pred) * 100))
 
 
 
